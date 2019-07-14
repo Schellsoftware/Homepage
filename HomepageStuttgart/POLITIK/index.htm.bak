@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Computerspiel Coconia</TITLE>
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Wirtsachaftskreislauf,Wirtschaftssimulation,Angebot,Nachfrage">
+<META NAME="Description" CONTENT="Wirtschaftskreislaufsimulation mit Java-Applet">
+<meta name="robots" content="follow">
+</HEAD>
+<BODY>
+<CENTER>
+<H1>Computerspiel&nbsp;Coconia&nbsp;</H1></CENTER>
+<P>Willkommen auf der Traumisel Coconia. Die Insel verfügt über ausgedehnte 
+Strände und grossen Kokusnusswäldern. Leider ist sie nur eine Trauminsel in 
+einem Computerspielm mit Java programmiert - deshalb Java aktivieren. Warum habe 
+ich mir diese Geschichte ausgedacht? Ich habe mich gefragt, was passiert an 
+seinem Arbeitstag viel produziert und von seinem Lohn wenig kaufen kann. Dazu 
+habe ich mir den einfachsten Fall vorgestgellt, nämlich eine Insel, auf der eine 
+Fabrik alles produziert. </P>
+<P>Früher haben die Bewohner alles Lebensotwendige direkt aus dem Urwald 
+bezogen, doch dann hat die Coconut AG eine neue Geldanlage gefunden. Sie hat die 
+komplette Insel gekauft.&nbsp;Zum Glück&nbsp;durften die Einwohner umsonst in 
+ihren Hütten wohnen, so dass in dem Modell keine Mietzahlungen erfolgen mussten. 
+Der einzige Arbeitgeber ist die Fabrik. Alle Waren werden aus dieser Fabrik 
+bezogen, in den Herstellungskosten sind auch die Vertriebskosten des 
+angeschlossenen Fabrikverkaufs beinhaltet. Die Einwohner verwenden den gesamten 
+Lohn für den Kauf der Produkte - die Nachfrage ist starr.&nbsp;Sie legen ihr 
+Geld nicht auf Konten zurück. Allerdings konnte wegen dem Gewinn auf den Waren 
+nicht so viele Waren gekauft werden, wie Produziert wurden. Deshalb wurden 
+in&nbsp;Kolonien neue Absatzmärkte gesucht. Die Überproduktion hatte neue Kunden 
+gefunden und bekam dafür&nbsp;günstige Rohstoffe. &nbsp;Nachdem das 
+Wirtschaftsystem installiert war, wurden die Kolonien in die Unabhängigkeit 
+entlassen. Für die Waren gibt es auch kein Lager, sondern die Überschüsse werden 
+verschifft. Andernfalls würde es Arbeitslose auf der Insel geben.</P>
+<P>Die Arbeiter konnten nur ihren Lohn und ihre Schulden konsumieren. Je grösser 
+der Gewinn war, desto grösser die relative Überproduktion.&nbsp;In dem 
+Computerspiel gibt es zwei Kreise: Einen blauen Kreis, der die hergestellten 
+Waren darstellt, und einen grünen Kreis, der den Absatz darstellt. Ziel ist es 
+beide Kreise ausreichend gross zu machen und möglichst in Deckung zu bringen. 
+Dann ist die Produktion groß genug und die Waren finden Absatz. Ist der blaue 
+Kreis größer als der grüne, so ist eine Überproduktion vorhanden, die Exportiert 
+wird. Im folgenden gibt es eine Animation, die die Spielzüge zeigt, dann kann 
+man spielen. Wer direkt spielen will, folgt dem <A 
+href="start/start.htm">Link</A>. Auf folgender <A href="spiel.htm">Seite</A> 
+gibt es etwas über das Spiel. Bitte nur ganze Zahlen eintragen. Mit 
+Aktualisieren wird die Animation neu gestartet.</P><BR>
+<applet code=mar11.class width="1000" height="600" ></applet>
+<P>&nbsp;</P>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+<P>Politik ist mein Hobby und ich diskutiere gerne. Für Diskussion, Ideen und 
+Kritik folgende <A href="mailto: harald@schellinger.de">Adresse</A>.</P>
+<P>&nbsp;</P></BODY></HTML>

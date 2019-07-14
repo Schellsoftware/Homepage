@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Ausrichtung einer Satelitteantenne </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name="robots" content="follow"> 
+<meta name="description" content="Ausrichten einer Satellitenantenne">
+<meta name="author" content="Harald Schellinger">
+<meta name="keywords" content="Satelittenantenne,Azimutwinkel, Elevationswinkel,Satellitenposition">
+
+</HEAD>
+<BODY>
+<br>
+<H1 align=center>Ausrichtung einer Satellitenantenne</H1>
+<P align=center>&nbsp;</P>
+<center>
+<applet code=satellit.class width="450" height="800" >
+</applet>
+</center>
+<br>
+<P align=center><A href="doc/index.html">Automatisch erzeugte Dokumentation von Javadoc</A></P>
+</BODY></HTML>

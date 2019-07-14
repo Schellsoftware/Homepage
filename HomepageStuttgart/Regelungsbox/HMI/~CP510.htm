@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.6001.18904"></HEAD>
+<BODY>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P><IMG src="file:///D:/Messbox/HTML/HMI/objecte.jpg"></P>
+<P>&nbsp;</P>
+<P><IMG src="dimension.jpg"></P>
+<P>
+<TABLE border=1 cellSpacing=0 cellPadding=0 width="100%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P align=left><FONT size=2>//Schließen des Fensters</P><FONT size=2>
+      <P align=left>addWindowListener( </FONT><B><FONT color=#7f0055 
+      size=2><FONT color=#7f0055 size=2>new</B></FONT></FONT><FONT size=2> 
+      WindowAdapter() {</P>
+      <P align=left></FONT><B><FONT color=#7f0055 size=2><FONT color=#7f0055 
+      size=2>&nbsp; public</B></FONT></FONT><FONT size=2> </FONT><B><FONT 
+      color=#7f0055 size=2><FONT color=#7f0055 
+      size=2>void</B></FONT></FONT><FONT size=2> windowClosing(WindowEvent e) 
+      {</P>
+      <P align=left>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      System.<I>exit</I>(0);</P>
+      <P align=left>&nbsp; }</P>
+      <P>} );</P></FONT></FONT></TD></TR></TBODY></TABLE></P><FONT size=2>
+<P align=left></FONT><FONT size=2><FONT size=2>&nbsp;</P>
+<P>//Die serielle Schnittstelle wird parametriert. Der COMPort 4 wird gewält. 
+Die Bautrate ist 9600.</P><FONT size=2>
+<P align=left></FONT><B><FONT color=#7f0055 size=2><FONT color=#7f0055 
+size=2>try</B></FONT></FONT><FONT size=2>{ </P>
+<P align=left>&nbsp; SerialPort serialPort = </FONT><B><FONT color=#7f0055 
+size=2><FONT color=#7f0055 size=2>new</B></FONT></FONT><FONT size=2> 
+SerialPort();</P>
+<P align=left>&nbsp; Parameters parameters = </FONT><B><FONT color=#7f0055 
+size=2><FONT color=#7f0055 size=2>new</B></FONT></FONT><FONT size=2> 
+Parameters();</P>
+<P align=left>&nbsp; parameters.setPort(</FONT><FONT color=#2a00ff size=2><FONT 
+color=#2a00ff size=2>"COM4"</FONT></FONT><FONT size=2>);</P>
+<P align=left>&nbsp; parameters.setBaudRate(</FONT><FONT color=#2a00ff 
+size=2><FONT color=#2a00ff size=2>"9600"</FONT></FONT><FONT size=2>);</P>
+<P align=left></FONT><FONT color=#0000c0 size=2><FONT color=#0000c0 
+size=2>&nbsp;com</FONT></FONT><FONT size=2> = </FONT><B><FONT color=#7f0055 
+size=2><FONT color=#7f0055 size=2>new</B></FONT></FONT><FONT size=2> 
+Com(parameters);</FONT></P>
+<P align=left><FONT size=2>} </FONT><B><FONT color=#7f0055 size=2><FONT 
+color=#7f0055 size=2>catch</B></FONT></FONT><FONT size=2> (Exception e) {</P>
+<P align=left>e.printStackTrace();</P>
+<P>}</P></FONT></FONT></FONT></BODY></HTML>

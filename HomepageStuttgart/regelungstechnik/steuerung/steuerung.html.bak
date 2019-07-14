@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> F&uuml;llstandssteuerung </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Füllstandsteuerung">
+<META NAME="Description" CONTENT="Beispiel einer Füllstandssteuerung">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>F&uuml;llstandssteuerung eines Beh&auml;lters</h1>
+<p>Der Beh&auml;lter wird Zeitgesteuert bef&uuml;llt. Jedes mal wenn Sp&uuml;le getr&uuml;ckt wird, wird der F&uuml;llzeit 30 Sekunden hinzugef&uuml;gt. Beim ersten Bef&uuml;llen wird der Beh&auml;lter fast ganz bef&uuml;llt. Beim Sp&uuml;len wird der Beh&auml;lter nicht ganz bef&uuml;llt, weil wegen des Abflusses weniger Wasser im Beh&auml;lter bleibt. Wenn man mehrere Male kurz hintereinander dr&uuml;ckt kann man den Beh&auml;lter zum &Uuml;berlaufen bringen. Die Steuerung hat keine R&uuml;ckkopplung &uuml;ber den F&uuml;llstand im Beh&auml;lter. Nat&uuml;rlich k&ouml;nnte man eine Steuerung etwas sicherer gestalten.</p>
+<applet code=Klo_Steuerung.class width="340" height="370" ></applet><br>
+<p>Das Blockschaltbild f&uuml;r die Steuerung ist unten abgebildet:</p>
+<IMG SRC="steuer_blockschaltbild.jpg" BORDER=0 ALT="">
+</BODY>
+</HTML>

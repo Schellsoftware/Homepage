@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>M&uuml;nze</title>
+</head>
+<body>
+<BR>
+<CENTER>
+<h1>M&uuml;nze</h1>
+
+<TABLE BORDER CELLPADDING=0>
+<TD ALIGN=CENTER>
+<applet
+    code=FTPCam.class name=FTPCam0_0 width=0 height=0 >
+    <param name=Interval value=3>
+    <param name=File value=test.jpg>
+</applet></TD></TR>
+</TABLE>
+
+<applet
+    code=muenze.class
+    name=test
+    width=320
+    height=420 >
+	<PARAM name=Ausschnitt_x value="90">
+	<PARAM name=Ausschnitt_y value="140">
+	<PARAM name=Ausschnitt_b value="120">
+	<PARAM name=Ausschnitt_h value="60">
+</applet>
+
+<FORM method=POST action="/cgi-bin/dart.pl">
+X:
+<INPUT TYPE="text" NAME="X" VALUE="0" SIZE=3>
+Y:
+<INPUT TYPE="text" NAME="Y" VALUE="0" SIZE=3>
+<INPUT TYPE="submit" VALUE="drehen">
+</FORM>
+
+<FORM method=GET action="/cgi-bin/magan.pl" enctype="multipart/form-data">
+<INPUT TYPE="submit" value=Magnet_an>
+</FORM>
+<FORM method=GET action="/cgi-bin/magaus.pl" enctype="multipart/form-data">
+<INPUT TYPE="submit" value=Magnet_aus>
+</FORM>
+
+</CENTER>
+</body>
+</html>

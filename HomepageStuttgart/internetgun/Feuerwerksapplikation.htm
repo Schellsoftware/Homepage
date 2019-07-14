@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<br>
+<a href="Feuerwerk.zip">Server- und Clientsourcecode zum Downloaden:</a></p>
+<br>
+<P>import java.awt.Button;<BR>import java.awt.Color;<BR>import 
+java.awt.Event;<BR>import java.awt.Frame;<BR>import java.awt.Graphics;<BR>import 
+java.awt.Graphics2D;<BR>import java.awt.event.WindowAdapter;<BR>import 
+java.awt.event.WindowEvent;<BR>import java.awt.image.BufferedImage;<BR>import 
+java.io.File;<BR>import java.io.FileOutputStream;<BR>import 
+java.io.PrintWriter;<BR>import java.net.Socket;</P>
+<P>import com.sun.image.codec.jpeg.JPEGCodec;<BR>import 
+com.sun.image.codec.jpeg.JPEGEncodeParam;<BR>import 
+com.sun.image.codec.jpeg.JPEGImageDecoder;<BR>import 
+com.sun.image.codec.jpeg.JPEGImageEncoder;</P>
+<P><BR>/**<BR>&nbsp;* @author Harald Schellinger<BR>&nbsp;*<BR>&nbsp;*/</P>
+<P>public class Feuerwerk extends Frame implements Runnable{</P>
+<P>&nbsp;boolean bildgueltig=false;//Bild geladen?<BR>&nbsp;BufferedImage 
+buffImg;// gepufferter Bildspeicher<BR>&nbsp;Socket s; //Verbindugssocket der 
+den Datenstrom aufnimmt<BR>&nbsp;PrintWriter out;//Ausgabe in den 
+Stream<BR>&nbsp;JPEGImageDecoder dec;//Jpeg decoder<BR>&nbsp;Button 
+Feuer_frei;//Startdrücker<BR>&nbsp;int zaehl=0;//Zähler für die 
+Bilder<BR>&nbsp;boolean 
+bumm=false;//Feuerwerksschalter<BR>&nbsp;<BR>&nbsp;public 
+Feuerwerk(){<BR>&nbsp;&nbsp;setLayout(null);//Kein Layout 
+ausgewählt<BR>&nbsp;&nbsp;&nbsp; &nbsp;setBackground(new 
+Color(230,230,230));//Hintergrundfarbe 
+wählen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; setSize(340,310);//Größe 
+festelgen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+setVisible(true);//Sichtbar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Feuer_frei = new Button("Starte Feuerwerk");//Startdrücker 
+beschriften<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Feuer_frei.setBounds(100,35,120,20);//Position des Startdrückers 
+festlegen<BR>&nbsp;&nbsp;add(Feuer_frei);//Startdrücker zum Layout 
+hinzufügen<BR>&nbsp;&nbsp;addWindowListener( new WindowAdapter() 
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public 
+void windowClosing(WindowEvent e) 
+{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+System.exit(0);//Beenden des Dialogs 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } );<BR>&nbsp;}<BR>&nbsp;public 
+void paint(Graphics g){<BR>&nbsp;&nbsp;Graphics2D g2d = (Graphics2D) 
+g;<BR>&nbsp;&nbsp;if(bildgueltig){<BR>&nbsp;&nbsp;&nbsp;g2d.drawImage(buffImg,10,60,this);//Bild 
+zeichnen<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public void 
+run(){<BR>&nbsp;&nbsp;try{</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+while(true){&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;s = new Socket("84.57.158.209",8189);//Socket mit der Internetadresse und 
+Port starten<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; out = new 
+PrintWriter(s.getOutputStream(),true);//Ausgabestrom 
+initialisieren<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(bumm){//Feuerwerk 
+gestartet?<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;out.println("Hasta la 
+vista");//Feuer frei<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;bumm=false;//Wieder ausschalten<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else out.println("Warte");//Warte mit 
+dem Feuerwerk<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dec = 
+JPEGCodec.createJPEGDecoder( s.getInputStream() );//Decodieren des 
+JPG<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+buffImg=dec.decodeAsBufferedImage();//Bild 
+erzeugen<BR>&nbsp;&nbsp;&nbsp;&nbsp;bildgueltig=true;//Bild 
+gültig<BR>&nbsp;&nbsp;&nbsp;&nbsp;//Bild 
+speichern<BR>&nbsp;&nbsp;&nbsp;&nbsp;/*File datei = new 
+File("K:\\programmieren\\bild"+zaehl+".jpg");<BR>&nbsp;&nbsp;&nbsp;&nbsp;zaehl++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;JPEGImageEncoder 
+enc = JPEGCodec.createJPEGEncoder( new 
+FileOutputStream(datei));&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+JPEGEncodeParam&nbsp; prm = enc.getDefaultJPEGEncodeParam( buffImg 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;prm.setQuality( 1.0f, false 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;enc.setJPEGEncodeParam( prm 
+);<BR>&nbsp;&nbsp;&nbsp;&nbsp;enc.encode( buffImg 
+);*/<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; repaint();//Neu 
+zeichnen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;catch (Exception 
+e){<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public boolean 
+action(Event event, Object eventObject){<BR>&nbsp;&nbsp;if ((event.target == 
+Feuer_frei)){//Startdrücker gedrückt?<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;bumm=true;//Feuerwerk starten<BR>&nbsp;&nbsp;&nbsp;return 
+true;<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;else return 
+false;<BR>&nbsp;}<BR>&nbsp;public static void main(String[] args) 
+{<BR>&nbsp;&nbsp;Feuerwerk feuer = new Feuerwerk();//Objekt Feuerwerk 
+starten<BR>&nbsp;&nbsp;feuer.run();//Start<BR>&nbsp;}&nbsp;&nbsp; 
+<BR>}</P></BODY></HTML>

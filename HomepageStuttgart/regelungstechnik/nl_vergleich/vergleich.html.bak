@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Vergleich lineares mit nichtlinearem System </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Nichtlineares System, lineares System">
+<META NAME="Description" CONTENT="Vergleich lineares mit nichtlinearen System">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Vergleich lineares mit nichtlinearem System</h1>
+<p>F&uuml;r lineare Systeme gilt das Superpositionsgesetz:</p>
+<IMG SRC="superposition.jpg" BORDER=0 ALT="">
+<p>Das hei&szlig;t das sich die L&ouml;sungen addieren. Dazu kommt noch das Homogenit&auml;tsdprinzip:</p>
+<IMG SRC="homogenitaet.jpg" BORDER=0 ALT="">
+<p>F&uuml;r einen Feder-Masse-Schwinger gilt:</p>
+<IMG SRC="pt2dgl.jpg" BORDER=0 ALT=""><br>
+<IMG SRC="pt2_sup1.jpg" BORDER=0 ALT=""><br>
+<IMG SRC="pt2_sup2.jpg" BORDER=0 ALT=""><br>
+<IMG SRC="pt2_hom.jpg" BORDER=0 ALT=""><br>
+<p>Der Feder-Masse-Schwinger ist ein lineares System. Die Differetiation ist linear. In dem folgenden Applet ist die Superposition dagestellt. Als erstes kommt die rechteckf&ouml;rmige blaue Anregung und die blaue Systemantwort. Danach kommt das gr&uuml;ne rampenf&ouml;rmige Signal, das auch als Antwortsignal gr&uuml;n ist. Auf der rechten Seite ist eine Kurve orange eingezeichnet. Es ist die &Uuml;berlagerung dieser Systemantworten. Da das Superpositionsprinzip gilt, ist die Systematwort der roten &Uuml;berlagerungen der Systematwort auf Rechteck- und Rampensignal deckungsgleich mit der orangenen Kurve.</p>
+<applet code=pt2_super.class width="400" height="220" ></applet><br>
+<p>Neben den linearen Systemen gibt es auch die nichtlinearen Systeme. Als Beispiel die Differentialgleichung eines Fahrzeugs:</p>
+<IMG SRC="fzg_dgl.jpg" BORDER=0 ALT="">
+<p>Das System ist nichtlinear und folgt nicht dem Superpositionsgesetz:</P>
+<IMG SRC="fzg_nhom.jpg" BORDER=0 ALT="">
+<p>F&uuml;r dieses System ist das Rechtecksignal auch blau und die Rampe gr&uuml;n. Die Summe der Antworten ist auch orange. Man sieht das das Superpositionsgesetz nicht gilt:</p>
+<applet code=auto_super.class width="600" height="250" ></applet><br>
+</BODY>
+</HTML>

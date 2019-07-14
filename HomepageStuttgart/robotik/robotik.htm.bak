@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+<title>Robotik</title>
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Kybernetik,optisches Messen,">
+<META NAME="Description" CONTENT="Arbeiten von Harald Schellinger,Pr&uuml;fobjektemodell,automatisches Einparken">
+</head>
+<link rel=stylesheet media="screen" href="../formate.css">
+<body text=#000000  LINK="#00000FF" VLINK="#0000FF" background="hintergrund.jpg">
+<center><h1>Robotik</h1></center>
+<div align="center"><center>
+
+<table border="0">
+    <tr>
+        <td><p align="center"><a style="CURSOR: crosshair" href="roboterkran/robot.html"><img
+        src="kran.gif" border="0" width="341" height="175"></a></p>
+        </td>
+        <td><strong>Hobby:</strong><p><a href="roboterkran/robot.html"><strong>Kameragesteuerter</strong></p>
+        <p><strong>Roboterkran</strong></p></a>
+        </td>
+    </tr>
+    <tr>
+        <td><A style="CURSOR: crosshair" HREF="optomess/index.html">
+        <p align="center"><img src="optomess.gif" border="1"
+        width="314" height="341"></p></a>
+        </td>
+        <td><strong>Studienarbeit:</strong>
+        <A HREF="optomess/index.html">
+        <p><strong>Pr&uuml;fobjektemodell</strong></p>
+        <p><strong>f&uuml;r optisches</strong></p>
+        <p><strong>Messen</strong></p></a>
+        </td>
+    </tr>
+    <tr>
+        <td><A style="CURSOR: crosshair" HREF="parken/index.html">
+        <p align="center"><img src="park.gif" width="497"
+        height="164"></p></a>
+        </td>
+        <td><strong>Diplomarbeit:</strong>
+        <A HREF="parken/index.html">
+        <p><strong>automatisches</strong></p>
+        <p><strong>Einparken</strong></p>
+        </td>
+    </tr>
+	<tr>
+        <td><A style="CURSOR: crosshair" HREF="http://www.automation.siemens.com/simatic/pcbased/html_00/produkte/drives/simodrive_2.htm">
+        <p align="center"><img src="Reg611U.gif"></a></p>
+        </td>
+        <td><strong>Arbeit bei Siemens</strong>
+        <A HREF="http://www.automation.siemens.com/simatic/pcbased/html_00/produkte/drives/simodrive_2.htm">
+        <p><strong>Regelungbaugruppe</strong></p>
+        <p><strong>611 U</strong></p>
+        </td>
+    </tr>
+</table>
+</center></div>
+<center>
+<EMBED SRC="t2.mid" loop="true" autostart="true"
+controls="smallconsole" HEIGHT="40" WIDTH="144" ALIGN="BOTTOM">
+</center>
+</body>
+</html>

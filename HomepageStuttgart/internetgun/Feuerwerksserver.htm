@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<br>
+<a href="Feuerwerk.zip">Server- und Clientsourcecode zum Downloaden:</a></p>
+<br>
+
+<P>import java.awt.Graphics2D;<BR>import java.awt.Image;<BR>import 
+java.awt.image.BufferedImage;<BR>import java.io.BufferedReader;<BR>import 
+java.io.InputStreamReader;<BR>import java.net.ServerSocket;<BR>import 
+java.net.Socket;</P>
+<P>import javax.media.Buffer;<BR>import javax.media.CaptureDeviceInfo;<BR>import 
+javax.media.CaptureDeviceManager;<BR>import javax.media.Manager;<BR>import 
+javax.media.Player;<BR>import 
+javax.media.control.FrameGrabbingControl;<BR>import 
+javax.media.format.VideoFormat;<BR>import javax.media.util.BufferToImage;</P>
+<P>import com.sun.image.codec.jpeg.JPEGCodec;<BR>import 
+com.sun.image.codec.jpeg.JPEGEncodeParam;<BR>import 
+com.sun.image.codec.jpeg.JPEGImageEncoder;</P>
+<P>&nbsp;</P>
+<P>/**<BR>&nbsp;* @author Harald Schellinger<BR>&nbsp;*<BR>&nbsp;*/<BR>public 
+class Feuerwerkserver extends Thread{<BR>&nbsp;Image img;//Bild das geladen 
+wird<BR>&nbsp;FrameGrabbingControl 
+frameGrabber;//Bildschnapper<BR>&nbsp;ServerSocket ss; //Serversocket für den 
+Datenstrom<BR>&nbsp;boolean res = false; int R;<BR>&nbsp;ftcomputing.JavaFish ft 
+= new ftcomputing.JavaFish(3);//Schnittstelle zum Fischertechnik interface</P>
+<P>&nbsp;public 
+Feuerwerkserver()<BR>&nbsp;{<BR>&nbsp;&nbsp;ft.setAnalogScan(true);//Scanner 
+starten<BR>&nbsp;&nbsp;System.out.println("Versionsnr : " + 
+ft.getVersion());<BR>&nbsp;&nbsp;R = 
+ft.openInterface("COM1");<BR>&nbsp;&nbsp;System.out.println("OpenStatus : " + 
+R);<BR>&nbsp;&nbsp;ft.showStatus();<BR>&nbsp;&nbsp;try{<BR>&nbsp;&nbsp;&nbsp;ss 
+=new ServerSocket(8189);//Serversocket mit Portnummer 
+<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create capture 
+device<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CaptureDeviceInfo deviceInfo = 
+CaptureDeviceManager.getDevice("vfw:Microsoft WDM Image Capture 
+(Win32):0");//Datenstrom anzapfen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Player 
+player = 
+Manager.createRealizedPlayer(deviceInfo.getLocator());//Filmplayer<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+player.start();//Filmplayer 
+starten<BR>&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Wait a few seconds 
+for camera to initialise (otherwise img==null)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+sleep(2500);<BR>&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Grab a frame 
+from the capture device<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; frameGrabber = 
+(FrameGrabbingControl)player.getControl("javax.media.control.FrameGrabbingControl");<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;catch(Exception 
+e){<BR>&nbsp;&nbsp;&nbsp;System.out.print(e);&nbsp;&nbsp;&nbsp; 
+<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public void 
+run(){<BR>&nbsp;&nbsp;try{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+while(true){<BR>&nbsp;&nbsp;&nbsp;&nbsp;Socket s= ss.accept();//Auf Datenströme 
+warten<BR>&nbsp;&nbsp;&nbsp;&nbsp;JPEGImageEncoder enc = 
+JPEGCodec.createJPEGEncoder( s.getOutputStream() );//Die Ausgabedaten werden jpg 
+komprimiert<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Buffer buf = 
+frameGrabber.grabFrame();//Bilder 
+grabben<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+sleep(100);//Warten<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BufferedReader in = 
+new BufferedReader(new InputStreamReader(s.getInputStream()));//Eingangsstrom 
+aufnehmen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+if((in.readLine()).compareTo("Hasta la vista")==0){//Feuerwerk 
+starten?<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;ft.setMotor(3,1);//Motor 
+starten<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+//System.out.println(in.readLine());<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; img 
+= (new BufferToImage((VideoFormat)buf.getFormat()).createImage(buf));//Bild 
+erzeugen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BufferedImage buffImg = new 
+BufferedImage(img.getWidth(null), img.getHeight(null),&nbsp; 
+BufferedImage.TYPE_INT_RGB );//gepuffertes Bild 
+erzeugen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Graphics2D g = 
+buffImg.createGraphics();//Grafik erzeugen 
+<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g.drawImage(img, null, null);//Bild 
+speichern&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+JPEGEncodeParam&nbsp; prm = enc.getDefaultJPEGEncodeParam( buffImg );//Bild in 
+jpeg wandel<BR>&nbsp;&nbsp;&nbsp;&nbsp;prm.setQuality( 1.0f, false );//Qualität 
+festlegen<BR>&nbsp;&nbsp;&nbsp;&nbsp;enc.setJPEGEncodeParam( prm 
+);//Kodierparameter festlegen<BR>&nbsp;&nbsp;&nbsp;&nbsp;enc.encode( buffImg 
+);//Bild kodieren<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;catch (Exception 
+e){<BR>&nbsp;&nbsp;&nbsp;System.out.print(e);<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public 
+static void main(String[] args) {</P>
+<P>&nbsp;&nbsp;Feuerwerkserver feuerserver = new 
+Feuerwerkserver();//Feuerwerksserver 
+erzeugen<BR>&nbsp;&nbsp;feuerserver.run();//Feuerwerksserver 
+starten<BR>&nbsp;}<BR>}</P></BODY></HTML>

@@ -1,0 +1,103 @@
+<HTML>
+<HEAD>
+   <TITLE></TITLE>
+
+</HEAD>
+<BODY BACKGROUND="hintergrund_ich2.jpg">
+
+<TABLE WIDTH="800">
+<TR>
+<TD>
+<TABLE BORDER=1 cellpadding=12>
+<TR ALIGN=LEFT VALIGN=TOP>
+<TD width=400>
+Vorname: Harald<BR>
+Nachname: Schellinger
+</TD>
+<TD>
+Geburtsdatum: 2.5.75<BR> 
+Geburtsort: VS-Villingen
+</TD>
+</TR>
+
+<TR>
+<TD>
+Viele Schularten durchgemacht: Grundschule,<BR> Hauptschule, <BR> Realschule <BR>
+und schlie&szlig;lich technisches Gymnasium:<BR> 
+Abi '95 Durchschnitt: 1.3
+</TD>
+<TD>
+Hobbys: Radfahren,<BR> Freibad,<BR> in der Stadt rumlungern,<BR> Luftgewehr/-pistole
+schie&szlig;en,<BR> Unsinn! <BR>
+Karate: Shintaikan
+</TD>
+</TR>
+
+<TR>
+<TD>
+Bundeswehr Sigmaringen
+</TD>
+<TD>
+Sport im Freien, Billiard und Kegeln 
+</TD>
+</TR>
+
+<TR>
+<TD>
+Studium an der Universit&auml;t Stuttgart<BR>
+Fachrichtung: technische Kyberntik<BR>
+Vertiefung: &quot;Fertigungstechnik&quot; (1)<BR>
+Studienarbeit (1.3)<BR>
+Diplomarbeit (1.3)<BR>
+Abschluﬂ: Dipl. Ing.<BR> 
+Gesamtdurchnitt: 1.8<BR>
+</TD>
+
+<TD>
+Studentenwohnheim Allmandring - viele Feste<BR> 
+Siedler spielen, <BR>
+Joggen (B&auml;renseen), <BR>
+auf dem Dach rumlungern, <BR>
+Internetsurfen (Flatrate), Programmieren,<BR>
+Radfahren, Freibad, Badmington<BR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+Siemens A&amp;D Antriebstechnik - Motion Control - Systemtest:<BR> 
+Simodrive 611 Universal<BR>
+Besonderes Interesse: Positionieren (Lageregelkreis)<BR>
+</TD>
+
+<TD>
+Spiele und Freizeitgruppe: Inlinern, Gesellschaftspiele, Ritteressen,
+Kajakfahren, Canyoning ...<BR> 
+City Fitness: Tae Bo, Ger&auml;te, Selbstverteidigung, Sauna<BR>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<CENTER>?</CENTER>
+</TD>
+
+<TD>
+<CENTER>?</CENTER>
+</TD>
+</TR>
+</TABLE>
+</TD>
+
+<TD></TD>
+</TR>
+
+<TR>
+<TD></TD>
+
+<TD></TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

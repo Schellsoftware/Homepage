@@ -1,0 +1,317 @@
+
+
+import java.applet.Applet;
+import java.awt.Button;
+import java.awt.Choice;
+import java.awt.Color;
+import java.awt.Event;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.TextField;
+
+
+
+
+/*
+ * Created on 18.02.2006
+ *
+ * TODO To change the template for this generated file go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+ 
+/**
+ * @author hars
+ *
+ * TODO To change the template for this generated type comment go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+public class pt1 extends Applet implements Runnable{
+	private Thread	 m_thread = null;
+	Image ausgabe;
+	Graphics g;
+	int sizex,sizey;
+	
+	int periode=0;
+	double p=0.5;
+	double pd=100;
+	double yk;
+	double ykm1=0;
+	double xkm1=0;
+	double y1;
+	int ein = 1;
+	int zeit=0;
+	int periodendauer=200;
+	Choice CAuto;
+	Button EinButton,AusButton;
+	int x[]=new int[250];
+	int y[]=new int[250];
+	String str;
+	int px[] = new int[3];
+	int py[] = new int[3];
+
+	public void init()
+	{
+		setLayout(null); // Freie Positionierung
+		EinButton = new Button("Ein");
+		EinButton.setBounds(130,20,50,20);
+		add(EinButton);
+		AusButton = new Button("Aus");
+		AusButton.setBounds(190,20,50,20);
+		add(AusButton);
+		CAuto = new Choice();
+		CAuto.setBounds(20,20,100,20);
+		CAuto.addItem("Automatik");
+		CAuto.addItem("Manuell");		
+		add(CAuto);
+		
+		for(int i=0;i<250;i++) x[i]=0;
+		for(int i=0;i<250;i++) y[i]=0;
+		
+		ausgabe=null;
+		g=null;
+		resize(600, 250);
+		int sx=size().width;
+		int sy=size().height;
+		if(sx!=sizex || sy!=sizey){
+			sizex=sx;
+			sizey=sy;
+			ausgabe=createImage(sx,sy);
+			g=ausgabe.getGraphics();
+		} // if
+	}
+
+	public void grafik_vorbereiten()
+	{
+		g.clearRect(0,0,sizex,sizey);
+		zeichneZyklus();
+	}
+
+	public void paint (Graphics g1)
+	{
+		grafik_vorbereiten();
+		g1.drawImage(ausgabe, 0, 0, this);
+	}
+
+	public void repaint (Graphics g1)
+	{
+		grafik_vorbereiten();
+		g1.drawImage(ausgabe, 0, 0, this);
+	}
+	public void start()
+	{
+		if (m_thread == null)
+		{
+			m_thread = new Thread(this);
+			m_thread.start();
+		}
+		// TODO: Place additional applet start code here
+	}
+	
+	//		The stop() method is called when the page containing the applet is
+	// no longer on the screen. The AppletWizard's initial implementation of
+	// this method stops execution of the applet's thread.
+	//--------------------------------------------------------------------------
+	public void stop()
+	{
+		if (m_thread != null)
+		{
+			m_thread.stop();
+			m_thread = null;
+		}
+
+		// TODO: Place additional applet stop code here
+	}
+
+	// THREAD SUPPORT
+	//		The run() method is called when the applet's thread is started. If
+	// your applet performs any ongoing activities without waiting for user
+	// input, the code for implementing that behavior typically goes here. For
+	// example, for an applet that performs animation, the run() method controls
+	// the display of images.
+	//--------------------------------------------------------------------------
+	public void run()
+	{
+
+		// If re-entering the page, then the images have already been loaded.
+		// m_fAllLoaded == TRUE.
+		//----------------------------------------------------------------------
+				
+
+	     while (true){
+			try
+			{
+				// Draw next image in animation
+				//--------------------------------------------------------------
+				
+				rechneZyklus();
+				grafik_vorbereiten();
+				periode ++;
+				
+				
+				if(CAuto.getSelectedIndex()==0){
+					if (periode > periodendauer/2){
+						ein = 0;
+					}
+					if (periode>periodendauer)	{
+						periode = 0;
+						periodendauer /= 2;
+						if(periodendauer<2) periodendauer =200;
+						ein=1;
+					}
+				}
+				//if(periode == 150) periode=0;
+				Thread.sleep(200);
+		        repaint();
+		        zeit ++;
+		        if(zeit >=250) {
+					for(int i=0;i<250;i++) {
+						y[i]=0;
+						x[i]=0;
+					zeit = 0;
+				}
+			}
+			catch (InterruptedException e)
+			{
+				// TODO: Place exception-handling code here in case an
+				//       InterruptedException is thrown by Thread.sleep(),
+				//		 meaning that another thread has interrupted this one
+				stop();
+			}
+	
+	     }
+	}
+	
+	public void rechneZyklus()
+	{
+		if(ein==1){
+			x[zeit]=100;
+			y1=(x[zeit]-ykm1)*0.05+ykm1; 
+			y[zeit]=(int)y1;
+			//xkm1 = x[zeit];
+			ykm1 = y1;
+		}
+		else{
+			x[zeit]=0;
+			y1=(0.95 * ykm1);
+			y[zeit]=(int)y1;// - 0.9 * xkm1);
+			xkm1 = x[zeit];
+			ykm1 = y1;
+		}
+		
+	}
+	
+	public void zeichneZyklus()
+	{
+		g.setColor(Color.black);
+		for(int i=0;i<249;i++){
+			g.setColor(Color.blue);
+			g.drawLine(300+i,200-x[i],301+i,200-x[i+1]);
+			g.setColor(Color.black);
+			g.drawLine(300+i,200-y[i],301+i,200-y[i+1]);
+		}
+		g.drawLine(300,200,560,200);
+		g.drawString("t",560,215);
+		px[0]=570;
+		py[0]=200;
+		px[1]=560;
+		py[1]=197;
+		px[2]=560;
+		py[2]=203;
+		g.fillPolygon(px,py,3);
+		g.drawLine(300,200,300,90);
+		g.drawString("p",290,90);
+		px[0]=300;
+		py[0]=80;
+		px[1]=297;
+		py[1]=90;
+		px[2]=303;
+		py[2]=90;
+		g.fillPolygon(px,py,3);
+		g.setColor(new Color(255-(int)(2.5*y[zeit]),255-(int)(2.5*y[zeit]),255));
+		g.fillOval(50,50,200,100);
+		if(ein==1)g.setColor(Color.blue);
+		g.fillRect(145,145,10,20);
+		g.setColor(Color.black);
+		g.drawOval(50,50,200,100);
+		g.drawLine(145,145,145,165);
+		g.drawLine(155,145,155,165);
+		
+		if(ein==1){
+			g.drawRect(140,165,80,30);
+			g.drawLine(180,165,180,195);
+			g.drawLine(150,165,150,195);
+			px[0]=150;
+			py[0]=165;
+			px[1]=147;
+			py[1]=175;
+			px[2]=153;
+			py[2]=175;
+			g.fillPolygon(px,py,3);
+			g.drawLine(170,190,170,195);
+			g.drawLine(167,190,173,190);
+			g.drawLine(190,165,210,195);
+			px[0]=210;
+			py[0]=195;
+			px[1]=200;
+			py[1]=185;
+			px[2]=207;
+			py[2]=185;
+			g.fillPolygon(px,py,3);
+			g.drawLine(190,190,190,195);
+			g.drawLine(187,190,193,190);
+		}
+		if(ein==0){
+			g.drawRect(100,165,80,30);
+			g.drawLine(140,165,140,195);
+			g.drawLine(150,165,170,195);
+			px[0]=170;
+			py[0]=195;
+			px[1]=160;
+			py[1]=185;
+			px[2]=167;
+			py[2]=185;
+			g.fillPolygon(px,py,3);
+			g.drawLine(150,190,150,195);
+			g.drawLine(147,190,153,190);
+			
+			g.drawLine(110,165,110,195);
+			px[0]=110;
+			py[0]=165;
+			px[1]=107;
+			py[1]=175;
+			px[2]=113;
+			py[2]=175;
+			g.fillPolygon(px,py,3);
+			g.drawLine(125,190,125,195);
+			g.drawLine(122,190,128,190);
+		}
+		g.drawLine(170,195,170,205);
+		px[0]=170;
+		py[0]=220;
+		px[1]=160;
+		py[1]=205;
+		px[2]=180;
+		py[2]=205;
+		g.drawPolygon(px,py,3);
+		g.setColor(Color.blue);
+		g.fillRect(145,195,10,30);
+		g.setColor(Color.black);
+		g.drawLine(145,195,145,225);
+		g.drawLine(155,195,155,225);
+		g.setColor(Color.black);
+		g.drawString("Harald Schellinger",400,230);
+	}
+	public boolean action(Event event, Object eventObject){
+		if ((event.target == EinButton)){
+			ein = 1;
+			
+			return true;
+		}
+		if ((event.target == AusButton)){
+			ein = 0;
+			
+			return true;
+		}
+		else return false;
+	}
+}

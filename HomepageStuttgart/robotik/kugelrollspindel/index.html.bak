@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Adaptive Kugelrollspindel </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="adaptive Kugelrollspindel">
+<META NAME="Description" CONTENT="Simulation einer adaptiven Kugelrollspindel">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Simulation einer adaptiven Kugelrollspindel</h1>
+<p>Eine adaptive Kugelrollspindel soll die Steifigkeit des Antriebsstrangs w&auml;hrend des Betriebs &auml;ndern. Die Steifigkeit hat Einflu&szlig; auf die erste Eigenfrequenz. Diese erste Eigefrequenz begrenzt die Bandbreite des Lageregelkreises und damit die m&ouml;gliche Verst&auml;rkung des Lageregelkreises. Das Stellglied dieses System sollte ein Piezo sein, der die Vorspannung des Systems &auml;ndert. Die Vorspannung hat Einflu&szlig; auf die Steifigkeit der Kugeln in der Kugelrollspindel und den Kugellagern. Im folgeden ist ein CAD-Modell der adaptiven Kugelrollspidel dargestellt.</p>
+<img src="spindel.jpg">
+<p>Dieses System wurde auch mit einem FEM Modell simuliert. Dadurch kann man die Steifigkeit gut simulieren. Au&szlig;erdem kann man einen Frequezgang des Systems aufnehmen.</p>
+<img src="fem.jpg">
+<p>Dieses System kann man auch mit Matlab simulieren, das gut f&uuml;r die Regelkreissimulation ist. Im folgenden ein Frequenzgangs des Systems:</p>
+<img src="frequenzgang.jpg">
+<p>Die &Auml;nderung der Steifigkeit der Kugeln in der Kugelrollspindel konnte nicht weiter erh&ouml;ht werden als die zus&auml;tliche Verringerung der Steifigkeit durch den Einbau des Piezo. Das Projekt wurde gestoppt.</p>
+</BODY>
+</HTML>

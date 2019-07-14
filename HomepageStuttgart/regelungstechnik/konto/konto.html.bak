@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Kontoregelung </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Kontoregelung, regelungstechnisches Beispiel">
+<META NAME="Description" CONTENT="Kontoregelung als regelungstechnisches Beispiel">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Kontoregelung als regelungstechnisches Beispiel</h1>
+<p>Die Regelung eines Girokontos ist ein nichttechnisches Beispiel. Es wird nicht praktisch angewendet, aber ist zum Verstehen der Regelungstechnik meiner Ansicht nach ein gutes Beispiel. Das Girokonto ist ein Summierer(&auml;hnlich eines Integrierers). Eine &Uuml;berweisungsauftrag besteht darin, die Differenz aus Sollguthaben und Istguthaben mit einem Verst&auml;rkungsfaktor dem Kontostand zuzuschreiben. Der Kontostand wird durch Abbuchungen reduziert. Der Regler gleicht diese Abbuchungen aus. Wenn man das Verhalten des Systems ohne Regler sehen will, muss man nur den Verst&auml;rkungsfaktor auf 0 setzen. Das F&uuml;hrungsverhalten sieht man beim Neustart des Systems. Das St&ouml;rungsverhalten kann man durch einstellen einer Abbuchung oder durch den Abbuchungsknopf beobachten. Sellt man eine Verst&auml;rkung gr&ouml;&szlig;er als 1 ein wird der Regler instabil.<p> 
+<applet code=konto.class width="600" height="200" ></applet><br>
+<p>Das F&uuml;hrungsverhalten des Regler ist so, dass er zum Sollwert einpendelt. Beim St&ouml;rungsverhalten gibt es eine bleibende Regelabweichung. Um den Regler zu entlasten k&ouml;nnte man die St&ouml;rgr&ouml;&szlig;e beim Reglerausgang aufschalten.</p> 
+</BODY>
+</HTML>

@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Bodediagramm PT1-System </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="PT1-System,Tiefpass,Nyquist">
+<META NAME="Description" CONTENT="Interaktive Java Animationen zu einem Nyquistdiagramm eines Verz&ouml;gerungsglied 1. Ordnung">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Verz&ouml;gerungsglied erster Ordnung (PT1- Glied)</h1>
+<center><img src="../pt1glied.jpg"></center><br>
+<p>Es gibt viele verschiedene technische Systeme, die die gleiche mathematische Beschreibung haben. Wenn man bei den folgeden Applets auf Start dr&uuml;ckt, dann sieht man den zeitlichen Verlauf mit den verschiedenen Zeitkonstanten. Im folgenden ist ein Beh&auml;lter abgebildet, dessen F&uuml;llstand blau eingezeichnet ist. Der Sollf&uuml;llstand ist die rote Linie. Das Rechteck links zwischen Sollf&uuml;llstand ist die Regeldifferenz zwischen soll und ist. Der ovale rote Schwimmer zeigt den istwert an. Er ist mit einer rote Stange mit einem Hebel verbunden. Dieser Hebel reduziert den Zufluss an Fl&uuml;ssigkeit, wenn er angehoben wird. Je kleiner die Regeldifferez, desto weniger Zufluss gibt es.</p>
+<applet code=fuel_pt1.class width="550" height="320" ></applet><br>
+<p>Ein &auml;hliches technisches System ist der Druckbeh&auml;lter mit Luftzufuhr. Statt dem Fl&uuml;ssigkeitsstrom flie&szlig;t ein Lufstrom hinzu. Dieses System besitzt keine Regeleinheit, sodern nur die Differenz zwischen Zustrom und Abfluss ist entscheidend. Des Regelvetil wird nach einiger Zeit ausgeschaltet, sodass der Beh&auml;lter sich wieder entleert.</p>
+<applet code=luft_pt1.class width="600" height="250" ></applet><br>
+<p>Bei der Kombination von Widerstand R und Kapazit&auml;t C, ist der Ladungszustrom I. Je mehr Ladung im Kondensator ist, desto weniger Strom (Ladung/Zeit) fliesst zu. Wenn der Kondensator voll geladen ist, f&auml;llt die gesamte Spannung am Kondensator ab.</p>
+<applet code=RC_pt1.class width="550" height="200" ></applet><br>
+
+<p>Die Differentialgleichung eines PT1- Systems:</p>
+<IMG SRC="pt1dgl.jpg" BORDER=0 ALT="">
+<p>Ein Druckluftbeh&auml;lter ist ein PT1- System. Das untere Ventil kennt nur den Zustand eingeschaltet und ausgeschaltet. Der Farbton des Blau soll den Druck darstellen. Ein helles Blau ist ein niedriger Druck und ein tiefes Blau ein hoher. Der Zufluss neuer Luft h&auml;ngt von der Druckdifferenz Innendruck zu Au&szlig;endruck ab.</p>
+<img src="pformel.jpg">
+<p>Dieser Zusammenhang ist im folgenden Applet dargestellt f&uuml;r den Ladevorgang. Die Ladekurve entspricht dem Strukturbild. Blau ist in der Kurve der Druck in der Leitung und der Druck im Druckluftbeh&auml;lter ist schwarz. Wenn Lade und Entladevorgang immer schneller werden, so sind die Druck&auml;derungen im Druckluftbeh&auml;lter immer kleiner. Das System l&auml;&szlig;t niedrige Frequenzen durch und sperrt hohe Frequenzen. Es ist ein Tiefpa&szlig;.</p>
+<applet code=pt1.class width="600" height="250" ></applet><br>
+<p>Ein anderes PT1 Glied ist der Tiefpa&szlig;. Er besteht aus einem Widerstand und einem Kondensator. Der Widerstand entspricht dem Luftwiderstand in den Luftzufuhrrohren und der Kondensator entspricht dem Druckluftbeh&auml;lter. </p>
+<img src="rc.jpg">
+<p>Die Widerst&auml;nde sind Frequenzabh&auml;ngig</p>
+<img src="widerstand.jpg">
+<p>Mit den gleichen Winkeln ergeben sich die Spannungen</p>
+<img src="spannung.jpg">
+<p>Der linke Kreis stellt das rotierende Zeigerdiagramm dar. Die Spannung am Kondensator ist nach unten verschoben. Die roten Kreise zeigen den aktuellen Stand an. Sie finden sich auch auf der rechts abgebildeten Sinuskurven wider. Der Abstand zwischen den beiden Sinuskurven ist der Phasenwinkel. Die Amplitude des Ausgangssignals wird mit h&ouml;herer Frequenz kleiner. Bei der Eckfrequenz ist die Ausgangsamplitude 0,707 der Eingangsamlitude, das entspricht -3dB und der Phasenwinkel ist 45&deg;, d. h. Spannung am Widerstand und an der Kapazit&auml;t ist gleich gro&szlig;.  Das ist auch in dem unteren Bodediagramm dargestellt. Der Phasenwinkel ist auch Teil des Bodediagramms. Eine andere Darstellung ist das Nyqist Diagramm, in dem die Amplitude mit der Phase dargestellt wird. Normalerweise m&uuml;&szlig;te der Zeiger bei h&ouml;heren Frequenzen schneller drehen und die Sinuskurven w&uuml;rden enger beieinader stehen. Aus gr&uuml;nden der Aimation wurde die Drehfrequenz gleich gelassen und die Sinukurven skaliert, damit man die Phasenverschiebung besser sehen kann.<p>
+<applet code=freq_pt1.class width="700" height="600" ></applet><br>
+<p><a href="../pt2/pt2.html">weiter</a></p>
+<p>
+Weitere Informationen in der freien Enzyklopedie Wikipedia: <a href="http://de.wikipedia.org/wiki/PT1-Glied">PT1-Glied</a>
+</p>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Regelkreiselement: Differenzierer </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Differezierer, D-Glied">
+<META NAME="Description" CONTENT="Interaktive Java Animation eines Differenzierers">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Differenzierer</h1>
+<center><img src="../dglied.jpg"><br></center>
+<p>Der Differenzierer reagiert auf eine Sprungfunktion (Rechteck) mit einer Spitze, wie im Strukturbild zu erkennen.</p>
+<img src="dformel.jpg">
+<p>Am linken Rand der Eingangsfunktion ist eine Steigungstangente dargestellt. Die Rechteckfunktion wird zu einer Spitze, der Sinus wird zu einem -90° verschobenen Sinus und die Dreiecksfunktion wird zu einer Rechteckfunktion. Da der Differenzierer als Regler die &Auml;nderungen erf&auml;&szlig;t sagt man er ber&uuml;cksichtigt die Zukunft.</p>
+<applet code=dglied.class width="500" height="300" ></applet><br>
+<p><a href="../iglied/iglied.html">weiter</a></p>
+<p>
+Weitere Informationen in der freien Enzyklopedie Wikipedia: <a href="http://de.wikipedia.org/wiki/D-Glied">D-Glied</a>
+</p>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Win32)">
+	<META NAME="CREATED" CONTENT="20100325;16594280">
+	<META NAME="CHANGED" CONTENT="20100408;6384183">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "MS Mincho"; font-size: 16pt }
+		H1.ctl { font-family: "Tahoma"; font-size: 16pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1 CLASS="western" ALIGN=CENTER>F&uuml;llstandsregelung</H1>
+<P ALIGN=LEFT>Die F&uuml;llstandsregelung ist &auml;hnlich der
+Klosp&uuml;lung. In einem Gef&auml;&szlig; ist ein Werkst&uuml;ck,
+das von einer Fl&uuml;ssigkeit, dem Elektrolyt umgeben ist. Der
+F&uuml;llstand der Fl&uuml;ssigkeit soll geregelt werden. Die
+Fl&uuml;ssigkeit wird durch eine Pumpe zugef&uuml;hrt. In der Grefik
+sind zwei Leitungen eingezeichnet. Eine f&uuml;r den Zuflu&szlig; und
+eine f&uuml;r den Abflu&szlig;. Die rote Linie ist der Sollwert. Der
+rechte rote Balken ist die Differenz zwischen Sollwert und Istwert.
+Diese Differenz wird mir dem Wert in dem oberen K&auml;stchen
+multipliziert und dann als Stellg&ouml;&szlig;e ausgegeben. Der rote
+ovale Schwimmernimmt den Istwert auf. Die Wellen in dem Gef&auml;&szlig;
+kommen von der Verfahrbewegung des Gef&auml;&szlig;es. Die Bewegung
+wird nicht dargestellt. Der Regler sollte so eingestellt werden, dass
+das Gef&auml;&szlig; schnell bef&uuml;llt wird, aber die Bef&uuml;llung
+so ruhig wie m&ouml;glich geschieht, das hei&szlig;t die Wellen
+sollen keine gro&szlig;en &Auml;nderungen bei der Stellgr&ouml;&szlig;e
+verursachen. Wenn man den Regler maximal einstellt, geht das Bef&uuml;llen
+am schnellsten, aber die Wellen verursachen eine gro&szlig;e &Auml;nderung
+der Stellgr&ouml;&szlig;e. Es ist daher ein Kompromis zwischen
+schnellen F&uuml;llen des Beh&auml;lters und kleinen &Auml;nderungen
+der Stellgr&ouml;&szlig;e zu finden.</P>
+<P ALIGN=LEFT><APPLET CODEBASE="../fuellstand" CODE="fuelbeispiel.class" ALIGN=LEFT WIDTH=794 HEIGHT=296>
+</APPLET><BR CLEAR=LEFT>Die Stellgr&ouml;&szlig;e y ergibt sich aus
+der Regeldifferenz xd multipliziert mit dem Proportionalregler Kp.
+Die Regeldifferenz ist Sollwert w &ndash; Iswert x.</P>
+<P ALIGN=LEFT>y=Kp*xd</P>
+<P ALIGN=LEFT>y=Kp(w-x) 
+</P>
+<P ALIGN=LEFT><IMG SRC="regler.jpg" NAME="Grafik1" ALIGN=LEFT WIDTH=528 HEIGHT=94 BORDER=0><BR CLEAR=LEFT>Die
+&Auml;nderung des F&uuml;llstands ergibt sich durch Zufluss - Abfluss</P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_m6d45b00e.gif" NAME="Objekt2" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=150 HEIGHT=38 BORDER=0></P>
+<P ALIGN=LEFT><IMG SRC="zufl.jpg" NAME="Grafik2" ALIGN=LEFT WIDTH=236 HEIGHT=72 BORDER=0><BR CLEAR=LEFT>Wenn
+man die Stellgr&ouml;&szlig;e einsetzt ergibt sich:</P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_mdcde7db.gif" NAME="Objekt3" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=108 HEIGHT=38 BORDER=0></P>
+<P ALIGN=LEFT>Als erstes l&ouml;st man die homogene
+Differentialgleichung:</P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_23f94dcd.gif" NAME="Objekt4" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=91 HEIGHT=38 BORDER=0></P>
+<P ALIGN=LEFT>In der Gleichung ist der Funktionswert und die Steigung
+enthalten. Bei der e-Funktion &auml;ndert sich die Steigung mit dem
+Funktionswert. Man w&auml;hlt also einen Rateansatz:</P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_m55520346.gif" NAME="Objekt10" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=74 HEIGHT=20 BORDER=0></P>
+<P ALIGN=LEFT>Eingesetzt in diie Differentialgleichung:</P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_m34c3f271.gif" NAME="Objekt9" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=169 HEIGHT=20 BORDER=0></P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_20ff378f.gif" NAME="Objekt6" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=136 HEIGHT=21 BORDER=0></P>
+<P ALIGN=LEFT><IMG SRC="beispiel_html_549730b6.gif" NAME="Objekt8" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=120 HEIGHT=20 BORDER=0></P>
+<P ALIGN=LEFT>Die L&ouml;sung der homogenen Differentialgleichung</P>
+<P ALIGN=LEFT><IMG SRC="test.gif" NAME="Grafik3" ALIGN=LEFT WIDTH=84 HEIGHT=21 BORDER=0><BR CLEAR=LEFT>Nun
+wird der inhomogene L&ouml;sungsanteil gesucht. Dazu wird in die
+Gleichung eingesetzt.</P>
+<P ALIGN=LEFT><IMG SRC="Eqn2.gif" NAME="Grafik5" ALIGN=LEFT WIDTH=334 HEIGHT=24 BORDER=0><BR CLEAR=LEFT>Nach
+k&uuml;rzen der Gleichung.</P>
+<P ALIGN=LEFT><IMG SRC="Eqn3.gif" NAME="Grafik4" ALIGN=LEFT WIDTH=122 HEIGHT=24 BORDER=0><BR CLEAR=LEFT>Nach
+C` aufgel&ouml;st</P>
+<P ALIGN=LEFT><IMG SRC="Eqn4.gif" NAME="Grafik6" ALIGN=LEFT WIDTH=114 HEIGHT=24 BORDER=0><BR CLEAR=LEFT><IMG SRC="Eqn5.gif" NAME="Grafik7" ALIGN=LEFT WIDTH=141 HEIGHT=29 BORDER=0><BR CLEAR=LEFT>Es
+wird integriert</P>
+<P ALIGN=LEFT><IMG SRC="Eqn6.gif" NAME="Grafik8" ALIGN=LEFT WIDTH=136 HEIGHT=44 BORDER=0><BR CLEAR=LEFT><IMG SRC="Eqn7.gif" NAME="Grafik9" ALIGN=LEFT WIDTH=80 HEIGHT=21 BORDER=0><BR CLEAR=LEFT>Die
+Gesamtl&ouml;sung setzt sich aus homogener und inhomogener L&ouml;sung
+zusammen:</P>
+<P ALIGN=LEFT><IMG SRC="Eqn9.gif" NAME="Grafik10" ALIGN=LEFT WIDTH=109 HEIGHT=21 BORDER=0><BR CLEAR=LEFT><IMG SRC="Eqn10.gif" NAME="Grafik11" ALIGN=LEFT WIDTH=110 HEIGHT=21 BORDER=0><BR CLEAR=LEFT>Die
+Konstante f&uuml;r die homogene L&ouml;sung erh&auml;lt man durch
+einsetzen der Anfangsbedingung. X(0)=0</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><IMG SRC="Eqn11.gif" NAME="Grafik14" ALIGN=LEFT WIDTH=52 HEIGHT=18 BORDER=0><BR CLEAR=LEFT>Die
+Gesamtl&ouml;sung ergibt sich daraus:</P>
+<P ALIGN=LEFT><IMG SRC="Eqn12.gif" NAME="Grafik12" ALIGN=LEFT WIDTH=114 HEIGHT=24 BORDER=0><BR CLEAR=LEFT>Nun
+noch mal die Animation ohne Wellen und Messrauschen. Es ergibt sich
+der typische Verlauf:</P>
+<P ALIGN=LEFT><BR><BR>
+</P>
+<P ALIGN=LEFT><APPLET CODEBASE="../fuellstand" CODE="fuelbeispiel2.class" ALIGN=LEFT WIDTH=643 HEIGHT=464></APPLET><BR CLEAR=LEFT><BR><BR>
+</P>
+</BODY>
+</HTML>

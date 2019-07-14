@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage Express 2.0">
+<title>robot</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p align="center"><font size="4">Kleiner Roboterkran</font></p>
+
+<p>Die &quot;sehende&quot; Maschine zu bauen war ein Traum von
+mir. Während des Vordiploms hatte ich angefangen einen
+&quot;Plotter&quot; zu bauen. Das ist das Gerät auf dem Regal
+(Bild 1). Doch das abarbeiten von Steuerzyklen, ohne auf die
+Umgebung zu achten, war auf Dauer nicht so interessant. So kam
+ich auf die Idee, daß eine Kamera die Umgebung beobachten
+könnte und auf Aufträge reagieren könnte. Wenn man einen
+Gegenstand, der sich vom Hintergrund abhebt, auf den Tisch legt,
+so wird er automatisch von dem Kran eingesammelt. Der Kran kann
+aber auch Stundenlang den Tisch betrachten und nichts tun, bis
+irgendwann einmal ein Gegenstand auf den Tisch gelegt wird. </p>
+
+<p align="center"><img src="roboter.gif" width="300" height="220"></p>
+
+<p align="center">Bild 1: Roboterkran</p>
+
+<p align="left">Die Steuersoftware ist größtenteils
+Objektorientiert geschrieben (Java) nur die Hardwarenahen Teile
+sind in C geschrieben. Die beiden Programmteile sind nach dem
+Client- Server Prinzip gekoppelt, so daß das Programm auf
+mehrere Rechner verteilt werden kann. Die Teilfunktionen sind in
+einem Dekompostionsdiagramm (Bild 2) dargestellt.</p>
+
+<p align="center"><img src="dekomp.gif" width="640" height="468"></p>
+
+<p align="center">Bild 2: Dekompostionsdiagramm</p>
+
+<p align="left">Das folgende Applet zeigt die Benutzeroberfläche
+mit einer off-line Simulation des Vorgangs. Welcher Punkt auf dem
+Bild zum Gegenstand gehört und welcher nicht, wird durch ein
+Schwellwertverfahren ermittelt. D. h. das alle Punkte, die nicht
+heller sind als ein Grenzwert, zu dem Objekt gehören. Im unteren
+Teil des Applets ist ein Histogramm abgebildet, das die
+Grauwertverteilung in dem Bild beschreibt. Legt man den
+Gegenstand auf den Tisch, so ändert sich die Grauwertverteilung.
+Der Grauwertverlauf auf dem Strich repräsentiert die Grauwerte.
+Der rote Strich markiert den Schwellwert. In dem oberen
+Editierfeld kann dieser Schwellwert verändert werden. Ist der
+Gegenstand erkannt worden, so werden die Schwerpunktskoordinaten
+(Xs, Ys) auf dem Tisch in seinem Koordinatensystem mit Hilfe der
+Triangulation berechnet. Man könnte auch sagen, daß die
+&quot;Perspektive herausgerechnet wird&quot;. </p>
+
+<p align="center"><applet code="muenze.class" align="baseline"
+width="346" height="420" name="test"><param name="Ausschnitt_x"
+value="90"><param name="Ausschnitt_y" value="140"><param
+name="Ausschnitt_b" value="120"><param name="Ausschnitt_h"
+value="80"></applet> </p>
+
+<p align="center">Steuerungsapplet</p>
+
+<p align="left">&nbsp;</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<HTML>
+<HEAD>
+<TITLE> Wirtschaftsregelkreis </TITLE>
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Wirtschaftsregelkreis,Schweinezyklus,Wirtschaftszyklus,Spinnwebtheorem">
+<META NAME="Description" CONTENT="Die Visualisierung eines Wirtschaftsregelkreises mit Java Applets">
+</HEAD>
+<link rel=stylesheet media="screen" href="../../formate.css">
+<BODY BGCOLOR="#FFFFFF">
+<h1>Wirtschaftsregelkreis</h1>
+<p>Ein bekanntes Beispiel f&uuml;r Wirtschaftszyklen sind die Schweinezyklen. Es ist ein stetiges Auf und Ab der Schweinepreise. Auf dieser Page m&ouml;chte ich anhand von Grafiken  veranschaulichen, wie es zu solchen Zyklen kommt. Als erstes wollen wir uns mit der Regelstrecke befassen. Es dauert aber einige Zeit, bis die Schweine schlachtreif sind. Diese Zwischenzeit nennt man Totzeit. In dieser Produktionszeitgrafik wandert ein Balken von der Zeit t=0 zur Zeit tende, wo das produzierte Gut dem Markt zur Verf&uuml;gung steht.</p>
+<applet code=Totzeit.class width="250" height="200" ></applet><br>
+<p>Das Angebot h&auml;ngt von der Produktionsmenge nach der Totzeit ab. Bei einem niedrigen Preis wollen wenige Produzenten produzieren und bei einem hohen Preis wollen viele produzieren. Man sieht das auf der linken Seite der Totzeitstrecke die Menge vom Preis abh&auml;ngt. Der rote Kreis zeigt die Menge an, die bei einem bestimmten Preis prodziert wird.</p>
+<applet code=Angebot.class width="450" height="250" ></applet><br>
+<p>Angebot und Nachfrage ergeben den Preis. Bei einem geringen Angebot ist der Preis hoch und bei einem grossen Angebot ist der Preis niedrig. Der gr&uuml;ne R&uuml;ckkopplungspfeil zeigt vom Ende der Produktionszeit zum Nachfragediagramm hin. Ist der gr&uuml;ne Balken am Produktionszeitende gro&szlig; ist im Angebotsdiagramm der Preis niedrig und umgekehrt. Der rote Kreis zeigt den Preis an, den ein bestimmtes Angebot erzielt. </p>
+<applet code=Nachfrage.class width="450" height="250" ></applet><br>
+<p>Angebot und Nachfrage treffen sich auf dem Markt. In diesem Fall ist der Markt der Regler des Systems.Die waagrechten Pfeile entstehen dadurch, das bei einer Produktionsmenge auf dem Markt ein Preis erzielt wird. Durch diesen Preis, werden die Produzenten ermuntert eine Menge zu produzieren. Nach Ablauf der Produktionszeit stehen dann die Waren zur Verf&uumL;gung (senkrechter Strich). Beispielsweise ist auf dem Markt gerade wenig Schweinefleisch. Die Preise sind dementsprechend hoch. Die hohen Preise ermuntern die Bauern Schweine zu m&auml;sten. Nach einer gewissen Zeit sind die Schweine schlachtreif. Jetzt steht ein hohes Angebot einer niedriegen Nachfrage gegen&uuml;ber. Die Preise sind niedrig. Bei den niedrigen Preisen entscheiden sich weniger Bauern Schweine zu m&aumlsten. Nach der Produktionszeit steht wenig Schweinefleisch zur verf&uuml;gung und die erzielten Preise sind hoch. Der Zyklus beginnt von vorne. Die Zyklen bilden sich in einem sogenannten Spinnwebe (Cobweb-theorem) ab. Man kann sehen, dass f&uuml;r einen Produkltionsanreiz kleiner als 100 das System instabil und f&uuml;r gr&ouml;&szlig;er als 100 stabil ist. In der Mitte gibt es den Gleichgewichtspreis, bei dem Angbot und Nachfrage sich treffen.</p>
+<applet code=Spinnweb.class width="290" height="220" ></applet><br>
+<p>Nun kann man das System zusammenwirken lassen. Der rote Kreis bei der Nachfragekurve (blau) zeigt den Preis, den das aktuelle Angebot an Waren (gr&uuml;ner Balken am Ende der Produktion) erzielt. Der rote Kreis an der Angebotskurve zeigt wieviele Waren von den Herstellern produziert werden sollen. Es ist der Balken am Anfang der Produktionszeitleiste. Man kann durch geeignete Parametrierung des Produktionsanreizes die Stabilit&auml;t beeinflussen.</p>
+<applet code=Marktzyklus.class width="450" height="250" ></applet><br>
+<br>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

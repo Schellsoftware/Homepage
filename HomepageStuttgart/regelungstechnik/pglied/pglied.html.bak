@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Regelkreiselement: Proporional Glied </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Haral Schellinger">
+<META NAME="Keywords" CONTENT="P-Glied, Proportionalglied, Proportionalregler">
+<META NAME="Description" CONTENT="Interaktive Java Animation eines Proportionalgliedes">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Proportional-Glied</h1>
+<center><img src="../pglied.jpg"><br>
+<p>Das Proportionalglied hat f&uuml;r eine Sprungantwort (Rechtecksignal) ein proportional verkleinertes bzw. vergr&ouml;&szlig;ertes Signal. Wie man in dem unteren Applet sieht. Deshalb ist das Strukturbild ein waagrechter Strich im Quadrat. Ein Beispiel f&uuml;r den P-Regler ist ein Hebel wie in der <a href="../index.html">Klosp&uuml;lung</a>. Die Amplitude der Eingangssignale (links) sind um K- Verst&auml;rkte Ausgangssignale (rechts).</p>
+<img src="pformel.jpg">
+<p>Der untere Funktionsgenerator ist einem hardware Funktionsgenerator nachempfunden. Man kann aber nicht die Amplitude einstellen.</p>
+<applet code=pglied.class width="500" height="300" ></applet><br>
+<p><a href="../pt1/pt1.html">weiter</a></p>
+<p>
+Weitere Informationen in der freien Enzyklopedie Wikipedia: <a href="http://de.wikipedia.org/wiki/P-Glied">P-Glied</a>
+</p>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,195 @@
+/*
+ * Created on 17.06.2006
+ *
+ * TODO To change the template for this generated file go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+
+import java.applet.Applet;
+import java.awt.*;
+
+import javax.swing.*;
+/**
+ * @author hars
+ *
+ * TODO To change the template for this generated type comment go to
+ * Window - Preferences - Java - Code Style - Code Templates
+ */
+public class Totzeit extends Applet implements Runnable{
+	private Thread	 m_thread = null;
+	Image ausgabe;
+	Graphics g;
+	int sizex,sizey;
+	
+	int i;
+	int angebot, nachfrage;
+	int preis, menge;
+	double anreiz;
+	int produktion[] = new int [200];
+
+	String str;
+	int px[] = new int[3];
+	int py[] = new int[3];
+	
+	Button neustartButton;
+	
+	public void init()
+	{
+		setLayout(null); // Freie Positionierung
+		neustartButton = new Button("Neustart");
+		neustartButton.setBounds(60,20,80,20);
+		add(neustartButton);
+		
+		for (i=0; i<20; i++) produktion[i]=50;
+		for (i=20; i<200; i++) produktion[i]=0;
+		angebot = 100;
+		nachfrage = 100;
+		anreiz = 0.8;
+		ausgabe=null;
+		g=null;
+		resize(250, 200);
+		
+		
+		int sx=size().width;
+		int sy=size().height;
+		if(sx!=sizex || sy!=sizey){
+			sizex=sx;
+			sizey=sy;
+			ausgabe=createImage(sx,sy);
+			g=ausgabe.getGraphics();
+		} // if
+	}
+
+	public void grafik_vorbereiten()
+	{
+		g.clearRect(0,0,sizex,sizey);
+		zeichneZyklus();
+	}
+
+	public void paint (Graphics g1)
+	{
+		grafik_vorbereiten();
+		g1.drawImage(ausgabe, 0, 0, this);
+	}
+
+	public void repaint (Graphics g1)
+	{
+		grafik_vorbereiten();
+		g1.drawImage(ausgabe, 0, 0, this);
+	}
+	public void start()
+	{
+		if (m_thread == null)
+		{
+			m_thread = new Thread(this);
+			m_thread.start();
+		}
+		// TODO: Place additional applet start code here
+	}
+	
+	//		The stop() method is called when the page containing the applet is
+	// no longer on the screen. The AppletWizard's initial implementation of
+	// this method stops execution of the applet's thread.
+	//--------------------------------------------------------------------------
+	public void stop()
+	{
+		if (m_thread != null)
+		{
+			m_thread.stop();
+			m_thread = null;
+		}
+
+		// TODO: Place additional applet stop code here
+	}
+
+	// THREAD SUPPORT
+	//		The run() method is called when the applet's thread is started. If
+	// your applet performs any ongoing activities without waiting for user
+	// input, the code for implementing that behavior typically goes here. For
+	// example, for an applet that performs animation, the run() method controls
+	// the display of images.
+	//--------------------------------------------------------------------------
+	public void run()
+	{
+
+		// If re-entering the page, then the images have already been loaded.
+		// m_fAllLoaded == TRUE.
+		//----------------------------------------------------------------------
+				
+
+	     while (true){
+			try
+			{
+				// Draw next image in animation
+				//--------------------------------------------------------------
+				rechneZyklus();
+				grafik_vorbereiten();
+				
+				Thread.sleep(100);
+		        repaint();
+				
+				
+			}
+			catch (InterruptedException e)
+			{
+				// TODO: Place exception-handling code here in case an
+				//       InterruptedException is thrown by Thread.sleep(),
+				//		 meaning that another thread has interrupted this one
+				stop();
+			}
+	
+	     }
+	}
+	
+	public void rechneZyklus()
+	{
+		menge = produktion[199];
+		if (menge < 0) menge =0;
+		if(menge>100) menge = 100;
+		preis = angebot - menge;
+		for (i=199;i>0;i--)
+		{
+			produktion[i]=produktion[i-1];
+		}
+		
+		produktion[0]=0;
+	}
+	
+	public void zeichneZyklus()
+	{
+		g.setColor(Color.green);
+		for(i=0;i<200;i++)
+		{
+			g.drawLine(20+i,150,20+i,150-produktion[i]);
+		}
+		g.setColor(Color.black);
+
+		g.drawString("Menge",30,55);
+		g.drawString("Zeit",220,165);
+		g.drawLine(20,150,230,150);
+		px[0] = 240;
+		py[0] = 150;
+		px[1] = 230;
+		py[1] = 147;
+		px[2] = 230;
+		py[2] = 153;
+		g.fillPolygon(px, py, 3);
+		g.drawLine(20,150,20,40);
+		px[0] = 20;
+		py[0] = 40;
+		px[1] = 23;
+		py[1] = 50;
+		px[2] = 17;
+		py[2] = 50;
+		g.fillPolygon(px, py, 3);
+		g.drawString("Harald Schellinger",120,180);
+	}
+	public boolean action(Event event, Object eventObject){
+		if ((event.target == neustartButton)){
+			for (i=0; i<20; i++) produktion[i]=50;
+			for (i=20; i<200; i++) produktion[i]=0;
+			return true;
+		}
+		else return false;
+	}
+}

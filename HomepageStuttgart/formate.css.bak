@@ -1,0 +1,41 @@
+/* DATEI: formate.css */
+
+body { margin-top:10px; 
+margin-bottom:10px; 
+margin-right:10px;
+margin-left:10px;
+background-color:#FFFFFF;
+}
+
+p,h1,h2,h3,h4,ul,ol,li,div,td,th,address,blockquote,nobr,b,i
+     { font-family:sans-serif,Arial; }
+
+h1 { font-size:18pt; }
+
+h2 { font-size:16pt; }
+
+p,ul,ol,li,div,td,th,address,nobr,b,i { font-size:10pt;
+font-style:neormal;
+font-variant:nrormal;
+font-weight:normal;
+text-decoration:none;
+color:#0000FF;
+text-shadow:none;
+alignment:left;
+white-space:normal;
+}
+
+a:link { color:#AA5522; text-decoration:underline; }
+a:visited { color:#772200; text-decoration:underline; }
+a:active { color:#000000; text-decoration:none; }
+
+
+
+
+
+
+
+
+
+
+

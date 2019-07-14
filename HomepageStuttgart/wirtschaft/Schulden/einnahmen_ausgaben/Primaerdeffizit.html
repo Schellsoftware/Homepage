@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title></title>
+<meta name="author" content="Schakal">
+<meta name="editor" content="html-editor phase 5">
+<script language="JavaScript">
+  <!--
+
+  function Test_gerade_positiv_null()
+ {
+    if(window.document.gerade_positiv_null.positiv.checked==true &&
+    window.document.gerade_positiv_null.negativ.checked==false
+   ){
+   window.document.gerade_positiv_null.Display.value =  "Richtig";
+   }
+   else
+   window.document.gerade_positiv_null.Display.value =  "Falsch";
+
+ }
+
+  function Test_gerade_negativ_null()
+ {
+    if(window.document.gerade_negativ_null.positiv.checked==false&&
+    window.document.gerade_negativ_null.negativ.checked==true
+   ){
+   window.document.gerade_negativ_null.Display.value =  "Richtig";
+   }
+   else
+   window.document.gerade_negativ_null.Display.value =  "Falsch";
+
+ }
+  function Test_gerade_positiv_b()
+ {
+    if(window.document.gerade_positiv_b.positiv.checked==true &&
+    window.document.gerade_positiv_b.negativ.checked==false
+   ){
+   window.document.gerade_positiv_b.Display.value =  "Richtig";
+   }
+   else
+   window.document.gerade_positiv_b.Display.value =  "Falsch";
+
+ }
+
+  function Test_gerade_negativ_b()
+ {
+    if(window.document.gerade_negativ_b.positiv.checked==false&&
+    window.document.gerade_negativ_b.negativ.checked==true
+   ){
+   window.document.gerade_negativ_b.Display.value =  "Richtig";
+   }
+   else
+   window.document.gerade_negativ_b.Display.value =  "Falsch";
+
+ }
+  //-->
+  </script>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#FF0000" alink="#FF0000" vlink="#FF0000">
+<p>In der folgenden Animation unten, wird das Staatsdefizit als F&uuml;llstand eines Beckens dargestellt. Von
+links kommen zwei Editierfelder, die mit einem Pfeil zu dem Becken zeigt. Das linke Editierfeld ist f&acute;&uuml;r
+die Staatsausgaben (g) und das rechte f&uuml;r die Einahmen (t). In dem Editierfeld unter der F&uuml;llstandsanzeige
+wird die Staatsschuld dargestellt. Wenn die Schuld negativ ist bzw ein Guthaben vorhanden ist, dann ist die Anzeige gr&uuml;n..
+Mit dem Button Jahr wird ein Jahr berechnet. Mit dem Button 60 Jahre wird 60
+Jahre lang berechnet. Mit dem Button 60 Schritte Jahre werden die Schritte animiert und automatisch berechnet.
+In dem Diagramm unten sind die Staatsschulden &uuml;ber der Zeit aufgetragen.
+Wenn die Ausgaben (g) die Einahmen (t) &uuml;berschreiten, steigt die Staatsschuld (b).
+In der folgenden Animation wird ein Modell ohne Zinsen simuliert. Wenn keine &Auml;nderung
+der Eink&uuml;nfte vorhanden ist, &auml;ndert sich die Staatschulden nicht. Bei einem Modell mit
+zinsen, &auml;ndert sich der Schuldenstand ohne das Gelder zugef&uuml;hrt werden.
+</p>
+
+
+
+<table width="600" border="1" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>&nbsp;g</td>
+  <td>&nbsp;Staatsausgaben</td>
+  <td>&nbsp;t</td>
+  <td>&nbsp;Netto-Transfereinnahmen</td>
+ </tr>
+ <tr>
+  <td>&nbsp;b</td>
+  <td>&nbsp;Staatsschuld</td>
+  <td>&nbsp;g-t</td>
+  <td>&nbsp;Prim&auml;rdefizit</td>
+ </tr>
+</table>
+
+
+<APPLET CODE="nur_u.class" ALIGN="center" WIDTH=800 HEIGHT=600></APPLET><br>
+ <p>In der folgenden Tabelle sind einige Vorschl&auml;ge, welche Parameter eingetragen werden k&ouml;nnen.
+ Nachdem mit diesen Werten simuliert wurde, kann das Ergebnis eingetragen werden.
+ </p>
+
+<table width="400" border="1" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>&nbsp;g&nbsp;</td>
+  <td>&nbsp;t&nbsp;</td>
+  <td>&nbsp;b&nbsp;</td>
+  <td>
+   &nbsp;Ergebnis Steigung Geraden
+  </td>
+
+ </tr>
+ <tr>
+  <td>&nbsp;46&nbsp;</td>
+  <td>&nbsp;44&nbsp;</td>
+  <td>&nbsp;0&nbsp;</td>
+  <td>
+  <form name="gerade_positiv_null">
+  <input type=checkbox name="positiv" value=""> positiv<br>
+  <input type=checkbox name="negativ" value=""> negativ<br>
+  <input name="Display" value="Leer" size=5 maxlength=5>
+  <input type=button value="Fertig" onClick="Test_gerade_positiv_null()">
+  </form>
+  </td>
+ </tr>
+ <tr>
+  <td>&nbsp;46</td>
+  <td>&nbsp;48</td>
+  <td>&nbsp;0</td>
+  <td>
+    <form name="gerade_negativ_null">
+  <input type=checkbox name="positiv" value=""> positiv<br>
+  <input type=checkbox name="negativ" value=""> negativ<br>
+  <input name="Display" value="Leer" size=5 maxlength=5>
+  <input type=button value="Fertig" onClick="Test_gerade_negativ_null()">
+  </form>
+  </td>
+
+ </tr>
+ <tr>
+  <td>&nbsp;48</td>
+  <td>&nbsp;46</td>
+  <td>&nbsp;25</td>
+  <td>
+    <form name="gerade_positiv_b">
+  <input type=checkbox name="positiv" value=""> positiv<br>
+  <input type=checkbox name="negativ" value=""> negativ<br>
+  <input name="Display" value="Leer" size=5 maxlength=5>
+  <input type=button value="Fertig" onClick="Test_gerade_positiv_b()">
+  </form>
+  </td>
+ </tr>
+ <tr>
+  <td>&nbsp;46</td>
+  <td>&nbsp;48</td>
+  <td>&nbsp;25</td>
+  <td>
+  <form name="gerade_negativ_b">
+  <input type=checkbox name="positiv" value=""> positiv<br>
+  <input type=checkbox name="negativ" value=""> negativ<br>
+  <input name="Display" value="Leer" size=5 maxlength=5>
+  <input type=button value="Fertig" onClick="Test_gerade_negativ_b()">
+  </form>
+  </td>
+ </tr>
+</table>
+
+<br>
+<p>Im folgenden ist eine Treppe dargestellt. Die Differenz der Zeit (z) betr&auml;gt ein Jahr.
+Die &Auml;nderung der Staatschulden (b) ist das Prim&auml;rdefizit (g-t).
+</p>
+<img src="gerade_herl.jpg" alt="" border="0" width="217" height="174"> <br>
+<p>
+Die Steigung der Geraden/Treppe ist g-t.
+</p>
+<img src="g1.gif" alt="" border="0" width="75" height="39"><br>
+<p>Die Differenzengeleichung ergibt sich.</p>
+<img src="g2.gif" alt="" border="0" width="86" height="27"><br>
+<p>Die Zeitdifferenz ist ein Jahr..</p>
+<img src="z.gif" alt="" border="0" width="115" height="21"><br>
+<p>Die H&ouml;he der "Treppenstufen" ist das Prim&auml;rdefizit (g-t).</p>
+<img src="bk1 (2).gif" alt="" border="0" width="104" height="21"><br>
+<p>Der neue Wert ergibt sich aus dem alten mit der Addition der Steigung (g-t)</p>
+<img src="bk1.gif" alt="" border="0" width="101" height="21"><br>
+<p>Der Vergleich zwischen den Ergebnissen der Simulation und der Rechnung per Hand wurden
+mit folgenden Parametern gemacht.</p>
+<table width="600" border="1" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>&nbsp;g=11</td>
+  <td>&nbsp;t=1</td>
+  <td>&nbsp;b0=0</td>
+ </tr>
+</table>
+<p>In der Simulation wurden die Werte errechnet. Diese kann man dann mit den von Hand gferechneten Werten verglichen werden.
+</p>
+<img src="gerade.jpg" alt="" border="0" width="309" height="319"> <br>
+<p> Die ersten Werte werden von Hand gerechnet:
+ </p>
+<img src="b0.gif" alt="" border="0" width="44" height="21"><br>
+<img src="b1f.gif" alt="" border="0" width="108" height="21"><br>
+<img src="b1.gif" alt="" border="0" width="54" height="21"><br>
+<img src="b2f.gif" alt="" border="0" width="111" height="21"><br>
+<img src="b2.gif" alt="" border="0" width="52" height="21"><br>
+<img src="b3f.gif" alt="" border="0" width="112" height="21"><br>
+<img src="b3.gif" alt="" border="0" width="52" height="21"><br>
+<p>Die Treppe kann man auch als eine Gerade beschreiben. y ist b; m ist (g-t); x ist z(Jahre); b ist b(0):
+</p>
+<img src="gerade.png" alt="" border="0" width="88" height="20">
+</body>
+</html>

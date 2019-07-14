@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Messen, regeln und steuern mit Mikrocontoller</title>
+<meta name="author" content="Schakal">
+<meta name="editor" content="html-editor phase 5">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#FF0000" alink="#FF0000" vlink="#FF0000">
+<h1>Messen, regeln und steuern mit Mikrocontroller</h1>
+<p>
+Die Kybernetik (von griechisch Steuermann) befasst sich mit Messen, Regeln und Steuern.
+Dieses Thema wird mathematisch behandelt. In den folgenden Internetseiten wird die Anwendung
+der Kybernetik auf Mikrocontoller gezeigt.Eine Mikrocontroller-Schaltung wird mit dem PC angesteuert.
+Es wird die serielle Schnittstelle verwendet.
+Man kann einen Servo ansteuern und einen Distanzsensor auslesen. Au&szlig;erdem gibt es zwei Taster und eine Led.
+Der Sourcecode ist auf folgender <a href="../HMI/HMI.html">Internetseite</a>.Der Ordner mit Ausf&uuml;hrungf&auml;higen HMIJAR
+Datei gibt es <a href="../HMI/HMI.zip">hier</a> zum Downloaden.Der Sourcecode f&uuml;r den Arduinocompiler:
+<a href="../HMI/HMI2_pde/HMI2_pde.pde">HMI2_pde.pde</a>Im Bild unten ist die Mikrocontroller Schaltung abgebildet.
+</p>
+<p align="center"><img src="Mikrocontroller.jpg" alt="" border="0" width="609" height="232"></p><br>
+<p>Der Sensor mi&szligt die Entfernung zu einem Objekt und wandelt es in ein analoges Signal um.
+&Uuml;ber ein Kennfeld wird die Spannung wieder in eine Entfernung gewandelt. Das Bild
+unten zeigt den Sensor.</p>
+<p align="center"><img src="sensor.jpg" alt="" border="0" width="188" height="272"></p><br>
+<p>Der Servo wird mit einem Digitalausgang gesteuert. Der Digitalausgang wird mit Pulsweitenmodulation
+geschalten. Die Sollwerte reichen von 0 bis 120. Das entspricht einem Grad, wenn der Servomotor eine
+Reichweite von 120 Grad hat.
+</p>
+<p align="center"><img src="actor.jpg" alt="" border="0" width="280" height="170"></p><br>
+<p>Die Bedienoberfl&auml;che dient zur Ansteuerung der Mikrocontrollerschaltung. Wenn der
+USB zu Seriellanschlu&szlig; nicht an COM4 angeschlossen ist. Dann kann man bei
+dem Eingabefeld den COM Port eingeben und mit der Taste: connect &auml;ndern.
+Mit dem Feld vor der Taste Servo wird die Winkelstellung des Servos eingestellt. Sie liegt
+zwischen 0 und 120 Grad. Mit der Servotaste wird dieser Sollwert an die Mikrocontrollerschaltung &uml;bermittelt.
+Wenn man den Schalter Distanz dr&uuml;ckt, wird die Distanz des Sensors &uuml;bermittelt.
+Die Checkbox vor LED ist zur Einstellung der Led zust&auml;dig. Mit Schalter Led wird der Zustand an die
+Mikrocontollerschaltung &uuml;bermittelt. Mit Taster kann man den Zustand der Taster abfragen. Wenn ein Taster gedr&uuml;ckt
+ist, so wird die Checkbox als aktiviert angezeigt. Die Dokumentation der<a href="../HMI/ind.html">Bedienoberfl&auml;che</a>.
+Der Sourcecode der <a href="../HMI/HMI.java">Bedienoberfl&auml;che</a>
+</p>
+<p align="center"><img src="hmi2.jpg" alt="" border="0" width="506" height="205"></p><br>
+<br>
+<br>
+<a href="transfer.zip">Bedienoberfl&auml;che</a>
+</body>
+</html>

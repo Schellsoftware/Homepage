@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Fahrzeugregelungsapplet </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<H1>Die Klasse Fahrzeug</H1>
+<p>Die Attribute der Klasse Fahrzeug sind in folgender Abbildung eines stilisierten Auto dargestellt:<br>
+<IMG SRC="attribute.jpg" BORDER=0 ALT=""><br>
+Die Position x,y,psi beziehen sich auf den Punkt in der Mitte der Hinterachse. Die Geschwindigkeit ist nicht in dem Bild dargestellt. Darauf wird sp&auml;ter eigegangen. Die Skalierung und die R&uuml;ckfuehrungen werden sp&auml;ter behandelt.<br> 
+<font color="#7f0055">public class</font> Fahrzeug {<br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> x; <font color="##339900">// x-Position</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> y;<font color="##339900">// y-Position</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> psi;<font color="##339900">// Gierwinkel</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> delta;<font color="##339900">// Lenkwinkel</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> v;<font color="##339900">// Geschwindigkeit</font><br>
+<br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> skal = 40;<font color="##339900">// Skalierungfaktor</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> kr; <font color="##339900">//Rückführung des Abstandes zur Sollbahn</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> kpsi; <font color="##339900">// Rückführung des Winkels zur Sollbahn</font><br>
+}</p>
+<p>Das Fahrzeug hat eine Geschwindigkeit und eine &Auml;nderung des Gierwinkels:<br>
+<IMG SRC="Systemgleichungen.jpg" BORDER=0 ALT=""><br>
+Die Geschwindigkeiten werden zu einer Positions&auml;derung aufintegriert. Der Radabstand ist l:<br> 
+Gerade:<br>
+<IMG SRC="gerade.jpg" BORDER=0 ALT=""><br>
+Kreis:<br>
+<IMG SRC="kreis.jpg" BORDER=0 ALT=""><br>
+Diese Berechnung findet in der Methode fahren statt:<br>
+<font color="#7f0055">public void fahre(double t)</font>{<br>
+	&nbsp;&nbsp;<font color="#7f0055">double</font> l=1.8;<br>
+	&nbsp;&nbsp;<font color="#7f0055">double</font> psi0;<br>
+ 	&nbsp;&nbsp;<font color="#7f0055">if</font> ((delta < 0.001)&&(delta > -0.001)){<font color="##339900">	// Gerade fahren</font><br>		
+	&nbsp;&nbsp;&nbsp;&nbsp;x = x + v * Math.cos(psi)*t;<br>			
+	&nbsp;&nbsp;&nbsp;&nbsp;y = y - v * Math.sin(psi)*t;<br>
+	&nbsp;&nbsp;}<br>
+	&nbsp;&nbsp;<font color="#7f0055">else</font>{<font color="##339900"> //Kreisfahrt</font><br>
+	&nbsp;&nbsp;&nbsp;&nbsp;psi0=psi;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;psi = v*t/l*Math.tan(delta)+psi0;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;x = (l/Math.tan(delta))*(Math.sin(psi)-Math.sin(psi0))+x;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;y = (l/Math.tan(delta))*(Math.cos(psi)-Math.cos(psi0))+y;<br>
+	&nbsp;&nbsp;}<br>
+}<br>
+F&uuml;r die Regelung gibt es auch eine Methode:<br>
+&nbsp;&nbsp;public void regle(double abstandsfehler, double winkelfehler){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;delta = -(kr*abstandsfehler+kpsi * winkelfehler);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(delta>(60.0/180.0*Math.PI)){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delta = 60.0/180.0*Math.PI;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(delta<(-60.0/180.0*Math.PI)){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delta = -60.0/180.0*Math.PI;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;}<br>
+<a href="fahrzeug.zip">Das Applet zum Downloaden:</a></p>
+</BODY>
+</HTML>

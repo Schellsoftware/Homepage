@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Modellierung von dynamischen Systemen</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Harald Schellinger">
+	<META NAME="CREATED" CONTENT="20080621;17242300">
+	<META NAME="CHANGED" CONTENT="20080629;18300761">
+	<META NAME="CLASSIFICATION" CONTENT="Modellierung von dynamischen Systemen">
+	<META NAME="KEYWORDS" CONTENT="Modellierung von dynamischen Systemen, Luftdruckbeh&auml;lter">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 21cm 29.7cm; margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		TD P { margin-bottom: 0.21cm }
+		H1 { margin-bottom: 0.21cm }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "MS Mincho"; font-size: 16pt }
+		H1.ctl { font-family: "Tahoma"; font-size: 16pt }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1 CLASS="western" ALIGN=CENTER>Modellierung dynamischer Systeme</H1>
+<P ALIGN=LEFT>Ziel dieses Abschnitts ist es, die mathematische
+Beschreibung mit anschaulichen Animationen zu verbinden. Als erstes
+Beispiel ist der Druckluftbeh&auml;lter gew&auml;hlt. Die Luftmasse
+mit &Uuml;berdruck ist ein Energiespeicher. In der Animation ist er
+oval dargestellt. Die Farbe ist zwischen Blau und Wei&szlig;, je nach
+Luftdruck im inneren. Die &Auml;nderung des Luftdrucks h&auml;ngt vom
+zu oder abflie&szlig;enden Luftstrom ab. In diesem Beispiel wird der
+Beh&auml;lter geleert. Unterhalb des Beh&auml;lters ist ein Ventil
+dargestellt. Die Pfeile zeigen die Richtung des Luftstroms an. Die
+kleine &Ouml;ffnung des Schlauchs drosselt die abflie&szlig;ende
+Luft. Je gr&ouml;&szlig;er die Druckdifferenz, desto gr&ouml;&szlig;er
+der Luftstrom. Die abflie&szlig;ende Luft reduziert den Druck im
+Beh&auml;lter und damit auch den abflie&szlig;enden Luftstrom. Es ist
+eine R&uuml;ckkopplung. Am Anfang ist der Luftstrom gro&szlig; und
+wird dann immer kleiner.</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><APPLET CODEBASE="../modell" CODE="luft2.class" ALIGN=LEFT WIDTH=616 HEIGHT=241>
+</APPLET><BR CLEAR=LEFT><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Nun wird die &Auml;nderung der Masse im
+Beh&auml;lter betrachtet. Der Masseabflu&szlig; m<SUB>ab</SUB> ist
+f&uuml;r die &Auml;nderung zust&auml;ndig:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_18fdcdad.gif" NAME="Objekt4" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=78 HEIGHT=38 BORDER=0>(1)</P>
+<P STYLE="margin-bottom: 0cm">Der Zuflu&szlig; h&auml;ngt von dem
+Widerstand W und der Druckdifferenz ab:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m53383800.gif" NAME="Objekt5" ALIGN=BOTTOM HSPACE=8 WIDTH=116 HEIGHT=20 BORDER=0>(2)</P>
+<P STYLE="margin-bottom: 0cm">Der Innendruck h&auml;ngt vom
+allgemeinen Gasgesetz ab. Das Volumen des Beh&auml;lters ist
+konstant. Die Gaskonstante auch und die Temperatur wird als konstant
+angenommen.</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="/C:/Users/Schakal/Documents/Regelungstechnik/Test_html_m7e37d77a.gif" NAME="Objekt3" ALIGN=BOTTOM HSPACE=8 WIDTH=92 HEIGHT=18 BORDER=0>(3)</P>
+<P STYLE="margin-bottom: 0cm">Die Formel wird nach m umgeformt:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_5551f6c6.gif" NAME="Objekt6" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=65 HEIGHT=38 BORDER=0>(4)</P>
+<P STYLE="margin-bottom: 0cm">In differentieller Form:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m7e260390.gif" NAME="Objekt7" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=100 HEIGHT=38 BORDER=0>(5)</P>
+<OL START=5>
+	<LI><P STYLE="margin-bottom: 0cm">und (2) in (1) eingesetzt:</P>
+</OL>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_169a3c9d.gif" NAME="Objekt8" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=164 HEIGHT=40 BORDER=0>(6)</P>
+<P STYLE="margin-bottom: 0cm">Umgeformt:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_44101dc7.gif" NAME="Objekt9" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=144 HEIGHT=59 BORDER=0>(7)</P>
+<P STYLE="margin-bottom: 0cm">Ersetzen des Terms V/(W*R*T) durch T<SUB>1
+</SUB>und p<SUB>i</SUB> durch x und p<SUB>a</SUB> durch u:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m74c99c1.gif" NAME="Objekt10" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=92 HEIGHT=38 BORDER=0>(8)</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Nun wird u=0 gesetzt und die L&ouml;sung
+f&uuml;r das Leeren des Tanks gesucht. Als Funktion f&uuml;r den
+Rateansatz nehme ich die e-Funktion:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m31f3eab5.gif" NAME="Objekt11" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=48 HEIGHT=20 BORDER=0>(9)</P>
+<P STYLE="margin-bottom: 0cm">In Gleichung (8) eingesetzt:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_3852c21e.gif" NAME="Objekt12" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=117 HEIGHT=40 BORDER=0>(10)
+</P>
+<P STYLE="margin-bottom: 0cm">Damit ergibt sich:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m6a116c5b.gif" NAME="Objekt13" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=114 HEIGHT=22 BORDER=0>(11)</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_4542fb60.gif" NAME="Objekt14" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=111 HEIGHT=22 BORDER=0>(12)</P>
+<P STYLE="margin-bottom: 0cm">Die e-Funktion wird nicht 0, daher
+ergibt sich s:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m2bf91158.gif" NAME="Objekt15" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=59 HEIGHT=40 BORDER=0>(13)</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_59fc362b.gif" NAME="Objekt16" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=50 HEIGHT=32 BORDER=0>(14)
+Der Exponent hat ein Minuszeichen, wird aber nicht angezeigt.</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<H1 CLASS="western">Modellierung eines RC-Gliedes</H1>
+<P>Ein Kondensator wird geladen. Der Strom wird mit einem Widerstand
+begrenzt. Der Kondensator ist das Speicherglied, der die Ladung
+speichert, analog zum Luftbeh&auml;lter beim pneumatischen System.
+Der Widerstand ist analog zur Drosselung des Luftstroms vor dem
+Luftbeh&auml;lter. Fr&uuml;her hat man die Berechnung von Systemen
+mit Analogrechner gemacht. Man hat mit elektrischen Schaltungen
+mechanische oder andere Systeme nachgebildet. Mit den digitalen
+Rechnern sind die Analogrechner ausgestorben.</P>
+<P>In der unteren Animation sieht man den Zustand des geladenen
+Kondensators. Die Ladungen gleichen sich aus. Dann wird der obere
+Teil des Kondensators entladen. Da oben kein Widerstand ist, kann die
+Ladung schnell entweichen. Beim unteren Teil des Kondensators ist ein
+Widerstand. Dieser Widerstand wird durch eine Verengung des Ablaufs
+dargestellt. Die &uuml;berz&auml;hligen Ladungen sto&szlig;en sich
+ab. &Auml;hnlich wie der Druck im Druckluftbeh&auml;lter. Sie werden
+aber durch den Widerstand am Abflie&szlig;en gehindert.</P>
+<P><IMG SRC="modell_html_m69291de4.gif" NAME="Grafik1" ALIGN=LEFT WIDTH=513 HEIGHT=466 BORDER=0><BR CLEAR=LEFT><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Im unteren Bild ist der Kondensator mit
+den eingezeichneten Str&ouml;men eingezeichnet:</P>
+<TABLE WIDTH=643 BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=121>
+	<COL WIDTH=506>
+	<TR VALIGN=TOP>
+		<TD WIDTH=121>
+			<P><IMG SRC="modell_html_1c0240f0.jpg" NAME="Grafik2" ALIGN=LEFT WIDTH=122 HEIGHT=81 BORDER=0><BR>
+			</P>
+		</TD>
+		<TD WIDTH=506>
+			<P>Nach der Maschenregel:</P>
+			<P><IMG SRC="modell_html_74bddc19.gif" NAME="Objekt2" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=118 HEIGHT=20 BORDER=0>(15)</P>
+			<P>Der Strom:</P>
+			<P><IMG SRC="modell_html_m4221e195.gif" NAME="Objekt17" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=74 HEIGHT=40 BORDER=0>(16)</P>
+			<P><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0cm">Die Machenregel mit ohmschen Gesetz:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_776ae225.gif" NAME="Objekt18" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=120 HEIGHT=20 BORDER=0>(17)</P>
+<P STYLE="margin-bottom: 0cm">Einsetzen von (16) in (17)</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m14c761eb.gif" NAME="Objekt19" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=158 HEIGHT=40>(18)</P>
+<P STYLE="margin-bottom: 0cm">Umgeformt und mit T<SUB>1</SUB>=R*C ,U<SUB>c</SUB>
+= x, U<SUB>g</SUB>=u</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="modell_html_m74c99c1.gif" NAME="Grafik3" ALIGN=ABSMIDDLE HSPACE=8 WIDTH=92 HEIGHT=38 BORDER=0>(19)</P>
+<P STYLE="margin-bottom: 0cm">Die Gleichung ist &auml;hnlich wie
+Gleichung 8. Die L&ouml;sung sieht aus wie (9) folgende.</P>
+<P STYLE="margin-bottom: 0cm"><APPLET CODEBASE="../modell" CODE="RC_modell.class" ALIGN=LEFT WIDTH=665 HEIGHT=251>
+</APPLET><BR CLEAR=LEFT><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

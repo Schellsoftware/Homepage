@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Bahnplanung </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Bahnplanug, Trajektorienplanung">
+<META NAME="Description" CONTENT="Bahnplanung zum automtischen Einparken eines Kraftfahrzeuges">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Bahnplanung</h1>
+<p> Es werden 2 Ans&auml;tze zur Bahnplanung vorgestellt. Der Unterschied liegt in der Art und Weise, wie die Hindernisse ber&uuml;cksichtigt werden. Der erste Ansatz ist wohl der anschaulichere: Bahnplanung im Arbeitsraum. Die folgende Abbildung zeigt die Bahn und die &uuml;berstrichene Fl&auml;che.</p>
+<center><img src="parken_fl.jpg"><p>Bahnplanung im Arbeitsraum</p></center>
+<p>Bei dieser Bahnplanung m&uuml;ssen die gesamten Abma&szlig;e des Fahzeugs ber&uuml;cksichtigt werden. Sinnvoller w&auml;re es wenn nur die Bahn eines Punktes (Trajektorie) ber&uuml;cksichtigt werden mu&szlig;. Diese Bahnplanung geschieht im Konfigurationsraum. Die x,y Ebene wird durch eine weitere Gr&ouml;&szlig;e den Gierwinkel Psi erweitert. </p>
+<center><table border=1>
+<tr>
+	<th>Arbeitsraum</th>
+	<th>Konfigurationsraum</th>
+</tr>
+<tr>
+	<td><img src="koord_arb.jpg"></td>
+	<td><img src="koord_konf.jpg"></td>
+</tr>
+</table></center>
+<p>Die Hindernisse werden um die Fahrzeugabmasse vergr&ouml;&szlig;ert.</p>
+<center><img src="hinderniss.jpg"></center>
+<p>Die Bahn wird als Trajektorie, die sich im 3 dimesionalen Raum bewegt, dargestellt. Die Hinderisse sind auch 3 dimensionale Objekte.</p>
+<center><img src="bahn_konf.jpg"></center>
+<p>Es wurden beide Bahnplanungsverfahren verwedet. Eine heuristische Bahnplanung mit festgelegten Man&ouml;ver hat eine Kollisionsdetektion im Arbeitsraum. F&uuml;hrte dieser Ansatz nicht zum Erfolg, wurde ein anderer Suchansatz im Konfigurationsraum verwendet.</p><br><br>
+<p><a href="regelung.html">Weiter zur Lenkungsregelung -></a></p>
+</BODY>
+</HTML>

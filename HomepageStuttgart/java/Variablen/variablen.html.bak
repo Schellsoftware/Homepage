@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Variablen </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<H1>Variablen</H1>
+<p>Die Daten eines Programms muss in Speicherpl&auml;tzen gespeichert werden. Entscheidend f&uuml;r jeden Datentyp ist seine Speichergr&ouml;&szlig;e. Zum Speichern eines Wahrheitswertes oder eines zweiwertigen Wertes wird ein <B>boolean</B> verwendet. Dieser Datentyp kann nur true (wahr) und false (falsch) annehmen. Beispielsweise kann eine Lampe oder Schalter nur an oder aus sein. In einer Steuerung sind das bin&auml;re Signale. Als Eingabe wird oft eine Checkbox verwendet. Sie kann nur aktiviert oder deaktiviert sein. Oder ein Button, der gedr&uuml;ckt ist oder nicht.</p>
+<CENTER>
+<TABLE border=1>
+<TR>
+	<TD>boolean</TD>
+	<TD>Wahrheitswerte (true/false)</TD>
+</TR>
+</TABLE>
+<TABLE>
+<TR>
+	<TD><IMG SRC="lampe.jpg" BORDER=0 ALT=""></TD>
+	<TD><IMG SRC="schalter.jpg" BORDER=0 ALT=""></TD>
+	<TD><INPUT TYPE="checkbox" NAME="Lampe an">Lampe an</TD>
+	<TD><INPUT TYPE="submit"></TD>
+</TR>
+</TABLE>
+</CENTER>
+<p>Zum Speicherrn eines Zeichens wird <B>char</B> verwendet. Die Zeichen dieses Textes k&ouml;nnten in <B>char</B> gespeichert sein.</p>
+<CENTER><TABLE border=1>
+<TR>
+	<TD>char</TD>
+	<TD>einzelnes Zeichen</TD>
+</TR>
+</TABLE></CENTER>
+<p>Zum Speichern von ganzen Zahlen verwendet man <B>Integer</B>. Reicht der Platz nicht aus wird <B>long</B> verwendet. Als Beispiel daf&uuml;r sind die Pixel eines Bildes. Die Breite sind 46 und die H&ouml;he sind 31 Pixel. Es gibt keine halben Pixel oder eine Nachkommazahl.</p>
+<CENTER><TABLE border=1>
+<TR>
+	<TD>int</TD>
+	<TD>-2<SUP>31</SUP>bis 2<SUP>31 </SUP>-1<br>-2 147 483 648 bis 2 147 483 647</TD>
+</TR>
+<TR>
+	<TD>long</TD>
+	<TD>-2<SUP>63</SUP>bis 2<SUP>63</SUP> -1<br>-9 223 372 036 854 775 808 bis 9 223 372 036 854 775</TD>
+</TR>
+
+</TABLE></CENTER>
+<br>
+<CENTER><IMG SRC="pixel.jpg" height=310 width=360 BORDER=0 ALT=""></CENTER>
+<p>Flie&szlig;kommazahlen werden in <B>float</B> oder <B>double</B> gespeichert. Es gibt Zahlen nach dem Komma. Als Beispiel hierf&uuml;r habe ich den Tachostand eines Fahrzeuges gew&auml;hlt. Die untere Anzeige wird betrachtet.</p>
+<CENTER><TABLE border=1>
+<TR>
+	<TD>int</TD>
+	<TD>bis 3.40282347E+38</TD>
+</TR>
+<TR>
+	<TD>long</TD>
+	<TD>bis 1.79769313486231570E+308</TD>
+</TR>
+</TABLE></CENTER>
+<IMG SRC="kilometer.jpg" BORDER=0 ALT="">
+</BODY>
+</HTML>

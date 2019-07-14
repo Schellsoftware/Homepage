@@ -1,0 +1,46 @@
+<HTML>
+<HEAD>
+   <META NAME="Author" CONTENT="Harald Schellinger">
+
+   <TITLE>Interressante Homepages</TITLE>
+</HEAD>
+<BODY>
+
+<CENTER>
+
+<table border=3><tr><td rowspan=5>
+<a href="http://www.buddyweb.com/Alexander_Irion/index.html"><img src="alex.jpg" WIDTH=70
+HEIGHT=90 
+border=0 align=middle></a>
+</td><td></td><tr><td></td></tr><tr><td> 
+<a href="http://www.buddyweb.com/Alexander_Irion/index.html">Alex's Homepage</a>
+</td></tr><tr><td></td></tr><tr><td></td></tr> </table> <br>
+
+<table border=3><tr><td rowspan=5>
+<a href="http://kyb.faveve.uni-stuttgart.de/klapper/"><img src="markus.jpg" WIDTH=125
+HEIGHT=90 
+border=0 align=middle></a>
+</td><td></td><tr><td></td></tr><tr><td> 
+<a href="http://kyb.faveve.uni-stuttgart.de/klapper/">Markus' Homepage</a>
+</td></tr><tr><td></td></tr><tr><td></td></tr> </table> <br>
+
+<table border=3><tr><td rowspan=5>
+<a href="http://kybs.de/Simon/"><img src="simon.jpg" WIDTH=90
+HEIGHT=90
+border=0 align=middle></a>
+</td><td></td><tr><td></td></tr><tr><td> 
+<a href="http://kybs.de/Simon/">Simon's Homepage</a>
+</td></tr><tr><td></td></tr><tr><td></td></tr> </table> <br>
+
+<table border=3><tr><td rowspan=5>
+<a href="http://129.69.164.234:20104/~joerg"><img src="joerg.jpg" WIDTH=100
+HEIGHT=90
+border=0 align=middle></a>
+</td><td></td><tr><td></td></tr><tr><td> 
+<a href="http://129.69.164.234:20104/~joerg">Joerg's Homepage</a>
+</td></tr><tr><td></td></tr><tr><td></td></tr> </table> <br>
+
+</CENTER>
+
+</BODY>
+</HTML>

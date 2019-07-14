@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> B&uuml;geleisen Regelkreis </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Buegeleisen,Regelkreis">
+<META NAME="Description" CONTENT="Beispiel eines Regelkreises eines Buegeleisens">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Beispiel eines Regelkreises anhand eines B&uuml;geleisens</h1>
+<p>Das B&uuml;geleisen wird durch ein Bimetall gesteuert. Bei niedriger Temperatur ist der Bimetallkontakt geschlossen und Strom flie&szlig;t durch die Heizspulen. Bei h&ouml;heren Temperaturen &ouml;ffnet der Bimetall und kein Strom flie&szlig;t mehr. Das B&uuml;geleisen ist als Verz&ouml;gerungsglied 1. Ordnung modelliert. In der Animation k&ouml;nnen die Umschaltpunkte eingestellt werden. Auch ist das manuelle Steuern des B&uuml;geleisens m&ouml;glich. Bei einem B&uuml;geleisen kann die Temperatur durch einen Drehschalter eingestellt werden. Der Farbton der Heizplatte gibt die Temperatur an. In dem Kurvenschreiber ist die rote Kurve die Stelltemperatur und die schwarze Kurve die Reaktion des Verz&ouml;gerungsgliedes 1. Ordnung.</p>
+<applet code=Buegel.class width="600" height="250" ></applet><br>
+<br>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Computerspiel Coconia</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<H1 align=center>Informationen zum Spiel</H1>
+<P>Dieses Spiel wurde mit Java Programmiert. Die nicht editierbaren Felder sind 
+folgedemassen berechnet:</P>
+<P>Produktionsmenge = Arbeiter * Arbeitszeit * 4 / Produktionszeit</P>
+<P>Absatz =&nbsp;(Arbeiter * (Lohn + Schulden) + Investitionen) / Preis</P>
+<P>Preis = Herstellungskosten + Gewinn</P>
+<P>Dieses Spiel ist keine umfassende volkswirtschaftliche Studie.&nbsp;Die 
+Diagramme sehen dort etwas anders aus.&nbsp;</P></BODY></HTML>

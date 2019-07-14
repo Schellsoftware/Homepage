@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+        <TITLE></TITLE>
+        <META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Win32)">
+        <META NAME="CREATED" CONTENT="20100408;15413843">
+        <META NAME="CHANGED" CONTENT="20100416;194311">
+        <STYLE TYPE="text/css">
+        <!--
+                @page { size: 21cm 29.7cm; margin: 2cm }
+                P { margin-bottom: 0.21cm }
+        -->
+        </STYLE>
+</HEAD>
+<BODY LANG="de-DE" DIR="LTR">
+<H1>Nyqistdiagramm und Zeiger aus der Wechselstromtechnik</H1>
+<p>In der folgenden Seite m&ouml;chte den Zusammenhang von Wechselstromtechnik und Zeigerdiagramme mit dem Bode Diagramm zeigen.
+Ich m&ouml;chte von dem Bekannten auf das Unbekannte gehen. Wem die Wechselstromtechnik auch unbekannt ist, kann die Seite
+&uuml;berspringen. In der Elektrotechnik werden f&uuml;r Wechselstrom gerne Zeigerdiagramme verwendet.</p>
+
+<P STYLE="margin-bottom: 0cm">Beispiel RC-Glied:</P>
+<P STYLE="margin-bottom: 0cm">Aus der Elektrotechnik ist die
+Reihenschaltung von Widerstand und Kondensator bekannt. Die Schaltung ist ein
+<A HREF="../../regelungstechnik/pt1/pt1.html">PT1- System<SPAN STYLE="text-decoration: none">
+</SPAN></A>und ein Tiefpa&szlig;.</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="rc.jpg" NAME="Grafik4" ALIGN=LEFT WIDTH=311 HEIGHT=124 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Die Widerst&auml;nde ergeben sich durch
+den komplexen Widerstand.</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="widerstand.jpg" NAME="Grafik5" ALIGN=LEFT WIDTH=141 HEIGHT=75 BORDER=0><BR CLEAR=LEFT>Da
+der gleiche Strom durch beide Widerst&auml;nde geht, ergibt sich
+folgendes Zeigerbild:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="spannung.jpg" NAME="Grafik6" ALIGN=LEFT WIDTH=131 HEIGHT=75 BORDER=0><BR CLEAR=LEFT>Die
+&auml;u&szlig;ere Spannung (Cyan) bleibt konstant. Es &auml;ndern
+sich die Spannung Uc (Rot) am Kondensator und die Spannung Ur (Gr&uuml;n)
+am Widerstand. Sie sind rechtwinklig zueinander. Die Frequenz wird
+erh&ouml;ht und damit wird Uc kleiner. Die schwarze Linie (Halbkreis) ist gleich dem Halbkreis im Nyquistdiagramm.</P>
+<P STYLE="margin-bottom: 0cm"><APPLET CODE="zeigerdiagramm.class" ALIGN=LEFT WIDTH=742 HEIGHT=252>
+</APPLET><BR CLEAR=LEFT><BR>
+</P>
+<p>Wenn man sich die Zeiger rotierend vorstellt, zeigen sie den Verlauf der Wechselspannung. Im folgenden sind die Zeiger im
+Kreis dargestellt</p>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="zeiger.jpg" NAME="Grafik7" ALIGN=LEFT WIDTH=225 HEIGHT=174 BORDER=0><BR CLEAR=LEFT>Die
+Amplitude und Phasenverschiebung kann man durch einen
+Funktionsgenerator und ein Osziloskop messen.</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="phase.jpg" NAME="Grafik8" ALIGN=LEFT WIDTH=327 HEIGHT=334 BORDER=0><BR CLEAR=LEFT>Die
+Zeiger f&uuml;hren zu einem Funktionswert, der gleichzeitig erreicht
+wird:</P>
+<P STYLE="margin-bottom: 0cm"><IMG SRC="linien.jpg" NAME="Grafik9" ALIGN=LEFT WIDTH=481 HEIGHT=225 BORDER=0><BR CLEAR=LEFT>
+<p>Der Sinus der Anregung und der Systemantwort sind unten dargestellt. F&uuml; das Nayquist Diagramm ist die Amplitude der
+Sinusschwingungen und die Phasenverschiebung relevant</p>
+<BR CLEAR=LEFT><IMG SRC="amplitude.jpg" NAME="Grafik10" ALIGN=LEFT WIDTH=573 HEIGHT=326 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<p>Der Halbkreis startet mit der Frequenz 0 rechts an der 1. Mit stiegenden Frequenzen geht der Halbkreis in den Ursprung.
+Die Linie mit den Amplitudenverh&auml;ltnisse ist f&uuml;r eine Frequenz und Phasenverschiebung dargestellt.<p>
+<IMG SRC="ortskurve.jpg" NAME="Grafik11" ALIGN=LEFT WIDTH=311 HEIGHT=467 BORDER=0><BR CLEAR=LEFT><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm">Die Zeiger kann man auch als Drehzeiger
+auffassen:</P>
+
+In
+dem folgenden Diagramm m&uuml;&szlig;te der Zeiger bei h&ouml;heren
+Frequenzen schneller drehen, das ist bei der Animation nicht der
+Fall. Auch m&uuml;sste der Sinus rechts ernger zusammen r&uuml;cken,
+aber das ist aus Gr&uuml;nden der Vergleichbarkeit der
+Phasenverschiebung nicht der Fall.</P>
+<P STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P STYLE="margin-bottom: 0cm"><APPLET CODE="ortskurve_pt1.class" ALIGN=LEFT WIDTH=700 HEIGHT=600>
+</APPLET><BR CLEAR=LEFT><BR>
+</P>
+<h1>&Uuml;bung</H1>
+<p>In der oberen Animation sind links 2 Kreise mit einem rotierenden Zeiger dargestellt. Wie ist der Zusammenhang des Zeigers
+mit dem Nyquist-Diagramm?</p>
+<p><A HREF="Nyquist_Kreise.htm">L&ouml;sung</A>
+</BODY>
+</HTML>

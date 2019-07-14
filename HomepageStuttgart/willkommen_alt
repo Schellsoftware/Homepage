@@ -1,0 +1,25 @@
+<html>
+
+<head>
+<title>Willkommen auf meiner Homepage</title>
+</head>
+
+<BODY TEXT="#FFFFFF"  LINK="#FFFFFF" VLINK="#FFFFFF" ALINK="#FFFFFF" BGCOLOR="#000000">
+<center><h1>Homepage von Harald Schellinger</h1></center>
+<map name="willkommen"> 
+<area shape=rect coords="200,160,630,210" href="http://schellinger.de/schellinger.html">
+<area shape=rect coords="55,265,305,325" href="http://kybs.de/harald/robot/robot.html">
+<area shape=rect coords="60,410,640,500" href="ich/ich.html"> 
+
+</map>
+<center><IMG SRC="inhalt.gif" usemap="#willkommen" border=0 HEIGHT=591 WIDTH=698></center>
+<br>
+<br>
+<CENTER>
+
+<a href="http://www.bluenetdesign.de" target="_top"><img src="http://www.bluenetdesign.de/cgi-bin/counter.pl?member=1010331271" border=0 alt="Kostenlose Counter -- BlueNetDesign"></a>
+
+</CENTER>
+</p>
+</body>
+</html>

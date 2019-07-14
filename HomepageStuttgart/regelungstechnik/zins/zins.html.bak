@@ -1,0 +1,34 @@
+
+<HTML>
+<HEAD>
+<TITLE> Exponentielles Wachstum durch Zins </TITLE>
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Zins, exponentielles Wachstum, zinseszins,zinsproblematik">
+<META NAME="Description" CONTENT="Die Visualisierung des exponentiellen Zinswachstums mit Java Applets">
+</HEAD>
+<link rel=stylesheet media="screen" href="../../formate.css">
+<BODY BGCOLOR="#FFFFFF">
+<h1>Kapital und Zins</h1>
+<p>Die Zinsrechnung ist Teil der Schulmathematik, doch kann man sich die Auswirkungen dieser Mathematik kaum vorstellen.<br>
+<IMG SRC="zinsrechnung.jpg"><br>
+Wir haben es mit exponentiellen Wachstum zu tun. Bei einem Zinssatz von 3 Prozent verdoppelt sich das Kapital alle 20 Jahre. In dem folgenden Applet ist die Entwicklung &uuml;ber 100 Jahre dargestellt:</p>
+<applet code=zinswachstum.class width="320" height="460" ></applet><br>
+<p>
+Ein bekanntes Beispiel ist der Josephcent. Wenn Joseph bei Jesus Geburt einen Cent zur Seite gelegt h&auml;tte und dieser mit 3,7 Prozent verzinst werden w&uuml;rde, w&auml;re dieser Cent zu <br><IMG SRC="Josephcent.jpg"> <br>
+angewachsen. Die Zahl ausgeschrieben:<br>
+465.547.579.309.432.430.792.864.266.967,78 Euro. Zum Vergleich die <a href="http://staatsverschuldung.de"> Schulden der Budesrepublik</a>: <br>1.565.389.581.240,00 Euro<br> 
+<h2>Dieses Kapital kann man nur mit dem Erdvolumen aus Gold vergleichen.<h2>
+<IMG SRC="Erdvolumen.jpg" BORDER=0 ALT="">
+<p>Jeder Kubikdezimeter w&uuml;rde umgerechnet soviel kosten:<p>
+<IMG SRC="Eurodm3.jpg" BORDER=0 ALT="">
+<p>Die ganze Erde aus Gold w&uuml;rde folgendes kosten:</p>
+<IMG SRC="GErde.jpg" BORDER=0 ALT="">
+<p>Dieses unglaubliche Kapital w&uuml;rde alle Banken der Welt sprengen. Ich halte das System f&uuml;r ein instabiles System. In der Geschichte m&uuml;&szlig;en die Schuldner entschuldet worden sein und die Reichen ihr Geld verloren haben. Es gibt immer wieder Krisen, wie vor einigen Jahren in Argentinien, die 12 Jahre andauernde Deflation in Japan oder W&auml;hrungsreformen. Bei Banken gibt es die Regelung, dass Konten gesperrt werden, wenn 30 Jahre keine Buchung get&auml;tigt wird.
+</p>
+<p>Regelungstechnisch kann man das Konto als ein Integrierer darstellen. Ein einmal eingezahltes Geld bleibt erhalten. Es gibt noch eine positive R&uuml;ckkopplung der Zins. Abh&auml;ngig vom Kontostand kommt der Zins (Proportionalglied) dazu. F&uuml;r den Zins gibt es wieder Zinseszins. Das folgende Schaubild zeigt das grafisch:<p>
+<img src="positiv.jpg">
+<br>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

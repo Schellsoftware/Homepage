@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE></TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<br>
+<a href="Feuerapplet.zip">Feuerwerksappletsourcecode zum Downloaden:</a></p>
+<br>
+<P><FONT color=#ff0000>import</FONT> java.applet.Applet;<BR>import 
+java.awt.Button;<BR>import java.awt.Color;<BR>import java.awt.Event;<BR>import 
+java.awt.Graphics;<BR>import java.awt.Image;<BR>import 
+java.awt.MediaTracker;</P>
+<P>&nbsp;</P>
+<P>/**<BR>&nbsp;* @author Harald Schellinger<BR>&nbsp;*<BR>&nbsp;*/</P>
+<P>public class Feuerwerk extends Applet implements Runnable{</P>
+<P>&nbsp;boolean bild_gueltig=false; //Schaltet die Bilderazeige 
+ein<BR>&nbsp;Button Feuer_frei; // Startdrücker für das Feuerwerk<BR>&nbsp;int 
+zaehler=1;//Zähler für die Bildersequenz<BR>&nbsp;boolean bumm=false;//Start für 
+das Feuerwerk<BR>&nbsp;Image&nbsp; bilder[] = new Image[13]; //Bilder die in der 
+Animation gezeigt werden<BR>&nbsp;private Thread&nbsp; m_thread = null;//Ablauf 
+starten<BR>&nbsp;<BR>&nbsp;public void 
+init(){//Initialisierungsroutine<BR>&nbsp;&nbsp;setLayout(null);//Anordnung der 
+Steuerelemente<BR>&nbsp;&nbsp;&nbsp; &nbsp;setBackground(new 
+Color(230,230,230));//Hintergrundfarbe 
+einstellen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+setSize(340,290);//Größe des Applets 
+festlegen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Feuer_frei = new 
+Button("Starte Feuerwerk");//Startdrücker erzeugen und 
+beschriften<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Feuer_frei.setBounds(100,10,120,20);//Lage des Startdrückers 
+festlegen<BR>&nbsp;&nbsp;add(Feuer_frei);//Startdrücker 
+hinzufügen<BR>&nbsp;&nbsp;MediaTracker mt = new 
+MediaTracker(this);//Ladeassistent erzeugen<BR>&nbsp;&nbsp;for(int 
+i=1;i&lt;13;i++){<BR>&nbsp;&nbsp;&nbsp; bilder[i] = 
+getImage(getCodeBase(),"bild"+i+".jpg");//Bilder laden<BR>&nbsp;&nbsp;&nbsp; 
+mt.addImage(bilder[i],i);//Bilder zum Ladeassistent 
+hinzufügen<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;try 
+{<BR>&nbsp;&nbsp;&nbsp;mt.waitForAll();//Auf die Bilder 
+warten<BR>&nbsp;&nbsp;&nbsp;bild_gueltig=true;//Bilder können angezeigt 
+werden<BR>&nbsp;&nbsp;} catch (InterruptedException 
+e){<BR>&nbsp;&nbsp;&nbsp;;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public void 
+paint(Graphics 
+g){<BR>&nbsp;&nbsp;if(bild_gueltig){<BR>&nbsp;&nbsp;&nbsp;g.drawImage(bilder[zaehler],10,40,this);//Bilder 
+anzeigen<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;else g.drawString("Bilder werden noch 
+geladen",10,100);<BR>&nbsp;}<BR>&nbsp;public void run(){<BR>&nbsp;&nbsp;try{</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while(true){<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;if(bumm){//Feuerwerk gestartet?<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;zaehler++;//Bildersequenz 
+hochzählen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;if(zaehler&gt;12){//Bildersequenz 
+fertig?<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;zaehler=1;//Anfangsbild 
+wählen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;bumm=false;//Feuerwerk ist 
+aus<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Thread.sleep(1000);//Wartezeit 
+festlegen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; repaint();//Neu 
+zeichnen<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+}<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;catch (Exception 
+e){<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public boolean 
+action(Event event, Object eventObject){<BR>&nbsp;&nbsp;if ((event.target == 
+Feuer_frei)){//Feuerwerksdrücker gedrückt?<BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;bumm=true;//Feuerwerk starten<BR>&nbsp;&nbsp;&nbsp;return 
+true;<BR>&nbsp;&nbsp;}<BR>&nbsp;&nbsp;else return 
+false;<BR>&nbsp;}<BR>&nbsp;public void start()<BR>&nbsp;{<BR>&nbsp;&nbsp;if 
+(m_thread == null)<BR>&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;m_thread = new 
+Thread(this);//Thread erzeugen<BR>&nbsp;&nbsp;&nbsp;m_thread.start();//Thread 
+starten<BR>&nbsp;&nbsp;}<BR>&nbsp;}<BR>&nbsp;public void 
+stop()<BR>&nbsp;{<BR>&nbsp;&nbsp;if (m_thread != 
+null)<BR>&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;m_thread.stop();//Thread 
+stoppen<BR>&nbsp;&nbsp;&nbsp;m_thread = null;//Thread 
+beenden<BR>&nbsp;&nbsp;}<BR>&nbsp;} <BR>}</P></BODY></HTML>

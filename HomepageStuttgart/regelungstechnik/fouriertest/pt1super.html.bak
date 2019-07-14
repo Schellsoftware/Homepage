@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Systemantwort eines PT1-Systems</TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="PT1-System,Fouriersynthese">
+<META NAME="Description" CONTENT="Systemantwort eines PT1-Systems">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Systemantwort eines PT1-Systems</h1>
+<p>Ein PT1-System (Tiefpa&szlig;) wird statt mit einem Rechtecksignal mit der Summe mehrer Sinussignale, die Zusammen eine N&auml;herung eines Rechtecksignals sind, angeregt. Die Sinussignale werden durch den Tiefpa&szlig; in der Amplitude kleiner und in der Phase verschoben. Aus den ganzen Sinussignalen wird in der rechten Ecke des Applets wieder eine Systematwort generiert. Links oben ist schwarz das Ausgangssignal dargestellt. Die rote Kurve ist die N&auml;herung des Rechtecksignals. Unten links ist das aktuelle Sinussignal dargestellt, das dazu addiert wird. In der Mitte ist das Frequenzspektrum des Rechtecksigals dargestellt. Unten in der Mitte ist das Blockschaltbild des PT1-Systems dargestellt. Rechts unten ist orange das aktuell zum Ursprungssignal dazuaddierte Sinussignal dargestellt. In der links unteren Darstellung ist es rot eingezeichnet. Dazu verschoben ist rechts unten rot das dazuaddierte Sinussignal gezeichnet. Aus diesen Sinussignalen wird rechts oben wieder eine Systemantwort superpositioniert.</p>
+<applet code=freq_pt1.class width="630" height="600" ></applet><br>
+</BODY>
+</HTML>

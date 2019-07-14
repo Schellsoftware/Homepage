@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Harald Schellinger">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.05 [en] (WinNT; I) [Netscape]">
+   <TITLE>Ein einfaches Beispiel f&uuml;r Fuzzy Control</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#C0C0C0" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000">
+Beispiel f&uuml;r ein einfaches
+Fuzzy-System:
+
+<P>Ballwurf in einen Korb
+
+<P>Wenn man <I>Start</I> dr&uuml;ckt F&auml;llt der Ball.<U>Den Ball kann
+man auch manuell versetzen, indem man &uuml;ber oder unter ihn klickt</U>.
+<BR>Mit <I>Wiederherstellen</I> kann man den Ball wieder aus dem Korb holen.
+Wenn man auf <I>Fuzzy Control</I> klickt,
+<BR>wird die H&ouml;he des Balles mit Hilfe der Zahlen und Regeln berechnet.
+Dieses System hat nur einen Eingang und einen Ausgang..
+<BR>Die Regeln sind recht einfach:
+<BR>ist der Korb nah, dann lege den Ball tief
+<BR>ist deer Korb weit weg, dann lege den Ball hoch usw.
+<BR>Mit <I>Fuzzy Zahlen zeichnen</I> kann man sich die Fuzzy-Zahlen mit
+Zugeh&ouml;rigkeitsfunktion anzeigen lassen.Die Zahlen k&ouml;nnen
+<BR>ver&auml;ndert werden, wenn man auf <I>H&ouml;he bestimmen</I> klickt.
+Dann kann man die H&ouml;he von der Fuzzy Zahl "hoch" ver&auml;ndern,
+<BR>indem man &uuml;ber oder unter die Zahl klickt. Mit <I>n&auml;chste
+H&ouml;he</I> kann man die n&auml;chste Fuzzy Zahl ver&auml;ndern, bis
+man die
+<BR>Eingabe durch <I>H&ouml;hen bestimmt</I> beendet.
+
+<P>&nbsp;<APPLET 
+    code=schleuder.class
+    name=schleuder
+    width=550
+    height=400 ></APPLET>
+<BR>&nbsp;
+<BR>Fuzzy Logic hat den Vorteil, da&szlig; man ohne ein mathematisches
+Modell Sachverhalte mit unscharfen Begriffen beschreiben kann.
+<BR>Hier in diesem Fall habe ich die Geschwindigkeit des Balles so ausgerechnet,
+als ob er im Vakuum fallen w&uuml;rde.&nbsp; Dadurch ergaben
+<BR>sich f&uuml;r die Simulation einfache Formeln, die Startposition des
+Balles h&auml;tte man einfach ausrechnen k&ouml;nnen. W&auml;re der Luftwiderstand
+<BR>und andere Einfl&uuml;&szlig;e ber&uuml;cksichtigt worden, w&auml;re
+die L&ouml;sung der Differentialgleichungen schwieriger geworden. In diesem
+Fall ist es
+<BR>einfacher auf Erfahrungswerte und unscharfe Logic zur&uuml;ckzugreifen.
+
+<P>&nbsp;
+<BR>&nbsp;
+</BODY>
+</HTML>

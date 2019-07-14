@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Politische Ansichten </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Bakterienwachstum,exponentielles Wachstum">
+<META NAME="Description" CONTENT="Wachstumssimualtion von Bakterien">
+
+</HEAD>
+<link rel=stylesheet media="screen" href="../../formate.css">
+<BODY BGCOLOR="#FFFFFF">
+
+<h1> Wachstumssimulation von Bakterien mit exponentiellen Verlauf </h1>
+<p>Bakterien vermehren sich durch Zellteilung. Dadurch verdoppelt sich die Zahl und sie vermehren sich sehr schnell. In dem folgenden Java-Applet habe ich versucht diesen Vorgang zu visualisieren. Der wachsende gr&uuml;ne Kreis stellt die Population dar:</p>
+<applet code=Bakterienwachstum.class width="400" height="400" ></applet><br>
+<p>Man sieht da&szlig; der Kreis sich schnell vergr&ouml;&szlig;ert.</p>
+<br>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

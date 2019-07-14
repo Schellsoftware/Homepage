@@ -1,0 +1,95 @@
+
+<HTML>
+<HEAD>
+<TITLE> Regelungstechnische Beispiele </TITLE>
+ <META name="verify-v1" content="AUya3WZduBdEQxUuGj6CHH1v5dUHGb2xozAVAQC97Rg=" />
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Regelungstechnik,Feder-Masse-Schwinger,Wirtschaftsregelkreis">
+<META NAME="Description" CONTENT="Beispiele zur Regelungstechnik">
+<meta name="robots" content="follow">
+
+</HEAD>
+<link rel=stylesheet media="screen" href="../formate.css">
+<BODY BGCOLOR="#FFFFFF">
+<h1>Regelungstechnische Beispiele</h1>
+<p>Ein einfaches Beispiel zur Regelungstechnik ist die Klosp&uuml;lung. In dem folgenden Java-Applet ist das dargestellt. Falls Sie das Applet nicht sehen k&ouml;nnen, m&uuml;ssen Sie geblockte Inhalte zulassen oder Java aktvieren. Der geknickte blaue Strahl, stellt den Zufluss zum Beh&auml;lter dar. Der Beh&auml;lter f&uuml;llt sich kontinuierlich. Ist der Wasserstand so hoch, das der Schwimmer (rot) angehoben wird, steigt der Schwimmer und senkt sich das Absperrvetil (rot). Der Wasserbeh&auml;lter ist gef&uuml;llt. Nun kann die Sp&uuml;lung bet&auml;tigt werden.</p>
+<applet code=klospuelung.class width="340" height="370" ></applet><br>
+<p>Der Regler ist die Stange die sich dreht. Es ist ein Proportionalregler mit Arbeitspunkt. Der Steller ist ein Proportionalventil, das den Wasserzustrom begrenzt. Der Beh&auml;lter ist die integrierende Regelstrecke. Der Schwimmer ist das Me&szlig;system. Das Beispiel aus dem Sanit&auml;rbereich soll nicht suggerieren, da&szlig; Kybernetik Sanit&auml;rtechnik ist. </p><img src="regler.jpg"><br><br>
+<h1>Regelungstechnik an Beispielen erkl&auml;rt</h1>
+<p><B>Im Studium war Regelungstechnik abstrakt erkl&auml;rt worden. Das will ich anders machen. Im Frontalunterricht an der Tafel konnten haupts&auml;chlich Fromeln verwendet werden. Das will ich besser machen und mit Hilfe von Animationen Teile der Regelungstechnik beschreiben.</B><p>
+<p>Als erstes m&ouml;chte ich den Unterschied zwischen Regelungstechnik und Steuerungstechnik erl&auml;utern. Das Beispiel f&uuml;r eine F&uuml;llstandsregelung wird mit einem Beispiel f&uuml;r eine <A HREF="steuerung/steuerung.html">F&uuml;llstandssteuerung</A> verglichen.</p>
+
+<TABLE>
+<TR>
+	<td><a href="lichtregelung/lichtregelung.html"><IMG SRC="Lichtregelug.jpg" BORDER=0 ALT=""></a></td>
+	<td>In diesem Beispiel wird die Lichtst&auml;rke konstant gehalten. Man kennt die Drehk&ouml;pfe oder Schieber von Lampen. Wenn die Lichtverh&auml;ltnisse aussen sich &auml;ndern, muss man das Licht aufdrehen oder wenn es zu hell ist und blendet zudrehen. Das wird im ersten Beispiel von Hand gemacht. Im zweiten Beispiel wird es automatisiert. Nun zur 
+	<a href="lichtregelung/lichtregelung.html">Lichtregelung.</a>
+	</td>
+</TR>
+</TABLE>
+<table border=0>
+<tr>
+	<td><a href="buegel/Buegel.html"><IMG SRC="buegeleisen_ikon.jpg" BORDER=0 ALT=""></a></td>
+	<td>Ein gutes Beispiel f&uuml;r eine Regelung ist das <a href="buegel/Buegel.html">B&uuml;geleisen</a> als 2 Punkt Regler</td>
+</tr>
+</table>
+<p>Danach wird ein <A HREF="nl_vergleich/vergleich.html">lineares mit einem nichtlinearen System</A> verglichen.
+
+<h2>Regelkreisglieder</h2>
+<table border=0>
+<tr>
+	<td><a href="fourier/fourier.html"><IMG SRC="testsignale.gif" BORDER=0 ALT=""></a></td>
+	<td><a href="fourier/fourier.html">Bevor man die Systeme mit Testfunktionen beaufschlagt, zeigt diese Animation die Frequenzanteile dieser Testfunktionen</a></td>
+</tr>
+</table>
+<p>Im folgenden werden einige Regelkreisglieder vorgestellt und mit Testfuktionen angesteuert.</p>
+<table border=1>
+<tr>
+	<td>Strukturbild</td>
+	<td>Regelkreiselement</td>
+	<td>Strukturbild</td>
+	<td>Regelkreiselement</td>
+	<td>Strukturbild</td>
+	<td>Regelkreiselement</td>
+</tr>
+<tr>
+	<td><a href="pglied/pglied.html"><img src="pglied.jpg"></a></td>
+	<td><a href="pglied/pglied.html">Proportionalglied</a></td>
+	<td><a href="pt1/pt1.html"><img src="pt1glied.jpg"></a></td>
+	<td><a href="pt1/pt1.html">verz&ouml;gerungsglied 1. Ordnung</a></td>
+	<td><a href="pt2/pt2.html"><img src="pt2glied.jpg"></a></td>
+	<td><a href="pt2/pt2.html">verz&ouml;gerungsglied 2. Ordnung</a></td>
+</tr>
+<tr>
+	<td><a href="dglied/dglied.html"><img src="dglied.jpg"></a></td>
+	<td><a href="dglied/dglied.html">Differenzierer</a></td>
+	<td><a href="iglied/iglied.html"><img src="iglied.jpg"></a></td>
+	<td><a href="iglied/iglied.html">Integrierer</a></td>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+<p>Beim Vergleich lineares und nichtlineares System wurde gezeigt, dass f&uuml;r lineare Systeme das Superpositionsgesetz gilt und f&uuml;r nichtlineare Systeme nicht. Im folgenden Applet wird das Superpositionsgesetz f&uuml;r ein PT1-System angewandt. In dem Abschnitt Frequenzanteile von Testfunktionen wurde das Rechtecksignal als &Uuml;berlagerung von verschiedenen Sinussignalen dargestellt. Die Systematwort der Sinuse wurde in folgendem <A HREF="fouriertest/pt1super.html">Applet</A>
+<p>Eine Idee wie eine gew&uuml;nschte Regelung aussehen k&ouml;nnte ist die Kontoregelung. Ein Kontostand der hoffentlich immer psoitiv ist. Ein nichttechnisches <A HREF="konto/konto.html">Beispiel</A> zum zeigen einiger regelungstechnischer Zusammenh&auml;nge.</p>
+<table border=0>
+<tr>
+	<td><a href="buegel/Buegel.html"><IMG SRC="buegeleisen_ikon.jpg" BORDER=0 ALT=""></a></td>
+	<td><a href="buegel/Buegel.html">B&uuml;geleisen</a> als 2 Punkt Regler</td>
+</tr>
+</table>
+<table border=0>
+<tr>
+	<td><a href="sauna/sauna.html"><IMG SRC="sauna_ikon.jpg" BORDER=0 ALT=""></a></td>
+	<td><a href="sauna/sauna.html">Sauna</a> als kontinuierlicher Regler</td>
+</tr>
+</table>
+<table border=0>
+<tr>
+	<td><a href="../robotik/parken/regelung.html"><IMG SRC="auto_ikon.gif" BORDER=0 ALT=""></a></td>
+	<td><a href="../robotik/parken/regelung.html">Fahzeugregelung</a> als Zustandsregler</td>
+</tr>
+</table>
+<p>Ein instabiles <a href ="zins/zins.html">Zinssystem</a></p>
+<p>Ein <a href="wregel/wirtschaftsregelkreis.html">Wirtschaftsregelkreis</a>.</p>
+</BODY>
+</HTML>

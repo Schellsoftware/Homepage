@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+
+//Schlie&szlig;en des Fensters<br>
+<br>
+addWindowListener( new WindowAdapter() {  <br>
+<br>
+  public void windowClosing(WindowEvent e) {<br>
+<br>
+       System.exit(0);<br>
+ <br>
+  }  <br>
+<br>
+} );<br>
+</td>
+ </tr>
+</table>
+
+
+
+//Die serielle Schnittstelle wird parametriert. Der COMPort 4 wird gew&auml;lt. Die Bautrate ist 9600.
+
+try{
+
+  SerialPort serialPort = new SerialPort();
+
+  Parameters parameters = new Parameters();
+
+  parameters.setPort("COM4");
+
+  parameters.setBaudRate("9600");
+
+ com = new Com(parameters);
+
+} catch (Exception e) {
+
+e.printStackTrace();
+
+}

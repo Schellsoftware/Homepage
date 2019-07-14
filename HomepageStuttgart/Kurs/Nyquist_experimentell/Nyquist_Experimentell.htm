@@ -1,0 +1,39 @@
+<HTML>
+
+<HEAD>
+<TITLE>Nyquist Diagramm experimentell ermitteln</TITLE>
+<META NAME="GENERATOR" CONTENT="Sothink HTML Editor">
+</HEAD>
+<BODY>
+<H1>Nyquist Diagramm experimentell ermitteln</H1>
+<p>Wenn man ein lineares System klassifizieren will, kann man das System mit verschiedenen Sinusen anregen. Die Antwort ist
+ein Sinus mit gleicher Frequenz, aber einer anderen Amplitude und einer Phasenverschiebung. F&uuml;r viele elementare Systeme
+gibt es Tabellen zur Klassifikation.
+Nehmen wir an man hat eine Feder und eine Masse mit D&auml;mpfung vor sich. Man will etwas &uuml;ber die dynamischen
+Eigenschaften erfahren. Nach Fourier kann ein <A HREF="../../regelungstechnik/fourier/fourier.html">Signal als kombination von Sinus</A>
+gesehen werden. Der Eingang wird mit einem Sinus (blau) angeregt. Das System Feder-Masse wird schwarz dargestellt.
+In der Mitte der Masse wird rot die Systemantwort aufgezeichnet.</p>
+<IMG SRC="Nyquist_Feder_Masse.jpg" ALT="" ><br>
+<p>Die Eingangsfunktion hat eine konstante Ampliutde xe(Dach). Die Frequenz des Sinus wird variert. </p>
+<IMG SRC="Eqn1.gif" ALT="" ><br>
+<p>Nach dem Einschwingvorgang hat die Ausgangsfunktion xa(t) die gleiche Frequenz, aber unterschiedliche Amplitude und Phasenverschiebung</p>
+<IMG SRC="Eqn2.gif" ALT="" ><br>
+<IMG SRC="nyquist_amplitude.jpg" ALT="" ><br>
+<p>Der experimentelle Frequenzgang ergibt sich zu:</p>
+<IMG SRC="Eqn3.gif" ALT="" ><br>
+<p>In dem folgenden Animation wird ein Feder-Massesystem mit D&auml;mpfung mit verschiedenen Frequenzen (blau) angeregt.
+Die Ausgangsfunktion wird rot dargestellt. In der Mitte sind die Signalverl&auml;ufe dargestellt. Man sieht die Unterschiede
+der Amplituden und die Phasenverschiebung. Unten ist das Nyqistdiagramm dargestellt. Man sieht sehr gut den Verlauf der
+Kurve in Richtung h&ouml;hrer Frequenz. Der Momentanwert ist mit einem blauen Kreis dargestellt.</p>
+<p><APPLET CODE="Feder_Nyquist.class" ALIGN=LEFT WIDTH=400 HEIGHT=750></APPLET></p><br>
+<br>
+<p align="right"><H1>&Uuml;bungen</H1>
+<p>Klassifizieren Sie das dynamische Verhalten:<br>
+- Tiefpa&szlig;<br>
+- Bandpa&szlig;<br>
+- Hochpa&szlig;<br>
+<A HREF="tiefpass.htm">L&ouml;sung</A></p>
+</p>
+
+</BODY>
+</HTML>

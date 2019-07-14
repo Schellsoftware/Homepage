@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Temperaturregelkreis </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Temperaturregelkreis">
+<META NAME="Description" CONTENT="Sauna als Beispiel f&uuml;r einen Regekreis">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Beispiel eines Regelkreises anhand einer Sauna</h1>
+<p>Die Sauna stellt ein Verz&ouml;gerungsglied 1. Ordnung dar. Der PID-Regler soll dieses System regeln. Als erstes ist der Proportionalteil aktiviert. Man sieht das das System eine bleibende Regelabweichung besitzt. Der Proportionalregler wird nur bei einer Regelabweichung aktiv. Um die bleibende Regelabweichug zu &uuml;berbr&uuml;cken, wird der Integrierer aktiviert. Er f&uuml;hrt allerdings manchmal zu einem &Uuml;berschwingen. Um den Ausgleich schneller zu machen, kann man den Differenzierer aktivieren. Die aktuelle Temperatur kann man dem Schreiber entnehmen oder der Farbe der T&uuml;r. Der Schalter "einschalten" l&auml;&szlig;t den Proze&szlig; neu starten. Man sieht dadurch das F&uuml;hrugsverhalten des Systems. Das St&ouml;rverhalten kann man mit dem Dr&uuml;cker "T&uuml;r auf" sehen und mit "T&uuml;r zu" wieder auschalten. Au&szlig;erdem kann man den Sollwert einstellen.</p>
+<applet code=sauna.class width="600" height="300" ></applet><br>
+<p>Der Regelkreis ist in dem unteren Bild dargestellt</p>
+<img src="skreis.jpg"><br>
+<br>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Wirtschaftsregelkreis </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Wirtschaftsregelkreis</h1>
+<p>Ein bekanntes Beispiel f&uuml;r Wirtschaftszyklen sind die Schweinezyklen. Wenn wenig Schweinefleisch auf dem Markt ist, sind die Preise daf&uuml;r hoch. Das f&uuml;hrt das mehr Schweinefleisch produziert wird. Es dauert aber einige Zeit, bis die Schweine schlachtreif sind. Es kann sein, das zuviel Schweinefleisch produziert wurde, so dass der Preis daf&uuml;r sinkt. Die Folge ist das weniger Fleisch produziert wird. Das kann zu Zyklen f&uuml;ren.</p>
+<p>Das folgende Applet soll einen solchen Sachverhalt simulieren. Der Markt ist folgender Massen modeliert: Das Angebot (gr&uuml;n) richtet sich nach dem Preis. Zum Preis 0 wird nichts produziert. Bei h&ouml;heren Preisen wird linear mehr produziert. Bis zu dem maximalen Preis, bei dem die Nachfrage (blau) 0 ist. Bei hohen Preisen ist die Menge, die Nachgefragt (blau) werden, gering. Bei geringen Preisen ist die Nachfrage gross, jedoch wollen weniger Firmen produzieren. In der Mitte gibt es den Gleichgewichtspreis, bei dem Angbot und Nachfrage sich treffen.</p>
+<p>Bis die Waren produziert werden, dauert es einige Zeit. Die Balken (gr&uuml;n) wandern von links nach rechts. Wenn die Produktionszeit vor&uuml;ber ist, wandern die Waren auf den Markt (gr&uuml;ner Pfeil). Die Produktionsmenge &auml;ndert sich mit der Differenz aus Nachfragepreis und Angebotspreis multipliziert mit Produktionsanreiz. Der Produktionsareiz wird durch die Zeit diffidiert. Mit &Uuml;bernehmen wird der Wert f&uuml;r den Produktionsanreiz &uuml;bernommen. Mit Neustart wird die Startsequenz neu eingespielt. Bei Werten um 0.3 wird das System gut ged&auml;mpft und bei Werten &uumL;ber 1 wird das System instabil. Das kann man gut ausprobieren</p>
+<applet code=Marktzyklus.class width="450" height="250" ></applet><br>
+
+</BODY>
+</HTML>

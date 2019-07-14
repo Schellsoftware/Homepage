@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Fouriersynthese von Testsignalen </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Fouriersynthese,Testsigale,Rechtecksigale,Sinussignale,Dreiecksignale">
+<META NAME="Description" CONTENT="Fouriersynthese von Testsignalen">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Fouriersynthese von Testsignalen</h1>
+<p>Bei einem Funktionsgenerator für elektriesche Spannungen kann man verschiedene Signale einstellen: <B>Rechteck</B>, <B>Dreieck</B> und <B>Sinus</B>. Mit diesen Signalen lassen sich elektrische Schaltungen analysieren. Bei der Regelungsbaugruppe 611U kann man auf den Sollwertkanal f&uuml;r die Drehzahl von elektischen Antrieben auch diese 3 Signale geben. Damit l&auml;&szlig;t sich der elektische Antrieb oder auch die dahinter befindliche Mechanik analysieren. Dieses Seite befa&szlig;t sich mit den Frequenzanteilen dieser 3 Signale. Nach Fopurier lassen sich periodische Sigale als &Uuml;berlagerung von Sinussignalen darstellen. In den folgenden Kapiteln werden diese Testfunktionen als Sollwerte f&uuml;r simulierte Systeme verwendet. In der linken oberen Ecke ist die Testfunktion schwarz eingezeichnet. Die N&auml;herungsfunktion ist rot eingezeichnet. Darunter befindet sich eine Grafik mit der aktuell hinzugef&uuml;gten Sinusfunktion. In der rechten Ecke befindet sich das Frequenzspektrum. Man kann in einer Auswahlbox zwischen Rechteck, Sinus und Dreick w&auml;hlen.</p>
+<applet code=fourier.class width="500" height="600" ></applet><br>
+<p>N&auml;herungsformel f&uuml;r das Rechtecksignal:</p> 
+<IMG SRC="rechteck.jpg" BORDER=0 ALT="">
+<p>N&auml;herungsformel f&uuml;r den Sinussignal:</p> 
+<IMG SRC="sinus.jpg" BORDER=0 ALT="">
+<p>N&auml;herungsformel f&uuml;r das Dreiecksignal:</p> 
+<IMG SRC="dreieck.jpg" BORDER=0 ALT="">
+<p>Man kann sich auch die Fouriersynthese als <A HREF="http://www.jhu.edu/~signals/listen-new/listen-newindex.htm">Musik anh&ouml;ren</A>.</p>
+<br>
+<p><a href="../pglied/pglied.html">weiter</a></p>
+<br>
+<P>Autor: <A href="http://www.schellinger.de">Harald Schellinger</A></P>
+</BODY>
+</HTML>

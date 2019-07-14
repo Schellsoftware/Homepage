@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Internetgun </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Internetgesteuert,Feuerwerk,Gewehr">
+<META NAME="Description" CONTENT="Steuern Sie ein Feuerwerk von zu Hause aus!">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<H1>Internetgesteuertes Feuerwerk</H1>
+<P>In der &ouml;ffentlichen Diskussion wird oft gesagt, da&szlig; Dienstleistungen die Zukunft sind. Immer weniger Leute arbeiten in der Landwirtschaft und im produzierenden Gewerbe. Die T&auml;tigkeiten mit grossem Anteil an menschlicher Arbeit werden oft ausgelagert oder es werden Maschinen eingesetzt. Viele Menschen versuchen auf dem Dienstleistugssektor arbeit zu finden. Jedoch ist die Arbeit oft schlecht bezahlt, weil viele Arbeitskr&auml;fte zur Verf&uuml;gung stehen, die auch die Arbeit machen k&ouml;nnen. Durch raumpflegen, frisieren und kellnern wird man nicht reich. Ich habe mir eine neue Dienstleistung ausgedacht: Das <B>internetgesteuerte Feuerwerk</B>. Haben Sie nicht lust mal ein Feuerwerk anzuz&uuml;nden, ohne vorher Vulkane oder Wunderkerzen einkaufen zu m&uuml;ssen. Auch gibt es keinen Pulvergestank beim Ausl&ouml;senden. Da diese Dienstleistung neu ist, gibt es ein begrenztes Kontingent an <B>kostenlosen Feuerwerken</B>. Wenn der erste Buchstaben Ihres Namens mit Wunderkerzen geformt werden kann, dann ist das ein gutes Motif. Greifen Sie zu und <A HREF="mailto:schellinger@internetgun.de">mailen</A> mir. Hier ist das Benutzerinterface, das ihnen zugemailt wird. Bei dieser Simulation k&ouml;nnen Sie auf Start dr&uuml;cken.</p>
+<APPLET CODE="Feuerwerk.class" WIDTH="340" HEIGHT="290">
+</APPLET>
+<P>War wohl zu viel Pulver dabei ;-) Wer das Java Applet nicht sehen kann, kann <A HREF="Feuerwerk.html">dort</A> eine Animation sehen. Die Programme sind unter folgender Seite ersichtlich: <A HREF="Feuerwerksapplet.htm">Simulationsapplet</A>, <A HREF="Feuerwerksapplikation.htm">Feuerwerksprogramm (Benutzer)</A> und <A HREF="Feuerwerksserver.htm">Feuerwerksserver(l&auml;uft bei mir)</A></p>
+<BR>
+<H1>Internetgesteuertes Gewehr</H1>
+<p>Ein weiteres neues Projekt ist ein internetgesteuertes Gewehr. In dem Film Schakal ist ein ferngesteuertes Gewehr dargestellt. Daraus stammt das folgende Bild:</P>
+<CENTER><IMG SRC="schakal.jpg" BORDER=0 ALT=""></CENTER>
+<P>Wenn das internetgesteuerte Gewehr fertig ist kann man es auf einem Schie&szlig;stand testen. Da braucht man noch sch&ouml;ne beklebte Zielscheiben. Die Bilder f&uuml;r die Zielscheibe werden dort nach Kundenwusch ausgedruckt. Beim Vertrieb wird das internetgesteuerte Gewehr als Jagdgewehr verkauft. Wer will nicht mal von zu Hause aus auf die Jagd gehen. In dicht besiedelten Gegenden gibt es viele J&auml;ger aber wenig Wild und in d&uuml;nn besiedelten Gebieten gibt es viel Wild und wenig J&auml;ger. Internetgun l&ouml;st das Problem. In einem <A HREF="vortrag/index.html">powerpoint Vortrag</A> ist das Thema beschrieben.</P>
+<P>Wer hat Interesse hat mitzuarbeiten kann sich hier <A HREF="mailto:schellinger@internetgun.de">melden</A>.</P> 
+<h1>Automatisches Einparksystem</h1>
+<p>Ein altes Prejekt war ein automatisches Einparksystem. Es war Thema meiner <A HREF="http://www.schellinger.de/robotik/parken/index.html"> Diplomarbeit </A>. Man k&ouml;nnte ein autonom fahrendes Fahrzeug etwickeln, das von einem Startpunkt zu einem Zielpunkt f&auml;hrt. Ein autoomes Fahrzeug ist auf <A HREF="http://www.youtube.com/watch?v=Fz1EOCp7ljQ ">Youtube</A> zu sehen. Die folgenden Bilder stammen von meiner Diplomarbeit:<p>
+<IMG SRC="Einparken.jpg" BORDER=0 ALT="">
+<p>Das Auto beim Einparkvorgang</p>
+<IMG SRC="Kofferraum.jpg" BORDER=0 ALT="">
+<p>Der mit Rechnern gespickte Kofferraum.<p>
+<p>Wer einen Film vom Einparken sehen will, kann <A HREF="http://home.arcor.de/schellinger/einparken.mpg">hier</A> nachsehen. Dort ist auch meine <A HREF="http://home.arcor.de/schellinger/diplomarbeit16.doc">Diplomarbeit</A> hinterlegt.</p>
+<h1>Regelt sich alles von selber?</h1>
+<p>Manche Leute denken, dass es am Besten w&auml;re, wenn Angebot und Nachfrage alles regeln w&uuml;rden. F&uuml;r diese Leute ist das Problem der Arbeitslosigkeit eine Frage der Kosten. Wenn die Arbeit billiger w&auml;re, dann g&auml;be es mehr. Sie sagen, dass die T&auml;tigkeiten nicht Produktiv genug sind. Nimmt man die Geh&auml;lter der Vorst&auml;nde, dann m&uuml;ssen diese Leute ja furchtbar produktiv sein. F&uuml;r viele gibt es nur geringe L&ouml;hne und ein Aufstocken auf Harz 4. Mindestl&ouml;hne wollen die christlichen CDU ler  nicht. Was ist das f&uuml;r ein Wirtschaftssystem, wo Menschen ganztags arbeiten und nur auf dem Sozialhilfeniveau leben.</p>
+<p>In Wirklichkeit zeigt die Artbeitslosigkeit ein Problem der Verteilung. Es sollten mehr Leute in produktiven Jobs besch&auml;ftigt sein. Global gesehen ist das Verteilungproblem noch gr&ouml;&szlig;er. In der EU werden Ackerfl&auml;chen prach gelassen, damit die Preise f&uuml;r Lebesmittel hoch bleiben und in der dritten Welt verhungern Menschen. Aber man sieht es nicht, weil es in diesen D&ouml;rfern keine Webcam gibt.</p>
+<p>W&auml;re nicht eine Welt schön, in der alles besser organisiert w&auml;re? Jeder sollte eine Perspektive haben. L&ouml;he unterhalb eines Midestlohnes sollte es nicht geben. Es gibt so viele sinnvolle T&auml;tigkeiten, die die Arbeitslosigkeit reduzieren w&uuml;rden. Aber das Geld fehlt. Man m&uuml;&szlig;te es anders organisieren. Statt Treibstoff anzubauen, sollten wieder mehr Nahrugsmittel produziert werden. Damit auf der Welt alle satt werden. In den Industriel&auml;ndern sollte f&uuml;r viele Besch&auml;ftigten wieder eine Perspektive sein. Sie sollten keine Angst vor Jobverlagerungen haben, bloss weil in anderen L&auml;dern schlechtere Arbeitsbedingugen sind. F&uuml;r eie bessere Welt sind viele Hindernisse zu bew&auml;ltigen.</p>
+<BR><BR><BR>
+<A HREF="http://www.schellinger.de">Harald Schellinger</A>
+ 
+
+</BODY>
+</HTML>

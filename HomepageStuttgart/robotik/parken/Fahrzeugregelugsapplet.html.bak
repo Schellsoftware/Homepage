@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Fahrzeugregelungsapplet </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<H1>Die Klasse Fahrzeug</H1>
+<p>Die Attribute der Klasse Fahrzeug sind in folgender Abbildung eines stilisierten Auto dargestellt:<br>
+<IMG SRC="attribute.jpg" BORDER=0 ALT=""><br>
+Die Position x,y,psi beziehen sich auf den Punkt in der Mitte der Hinterachse. Die Geschwindigkeit ist nicht in dem Bild dargestellt. Darauf wird sp&auml;ter eigegangen.<br> 
+<font color="#7f0055">public class</font> Fahrzeug {<br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> x; <font color="##339900">// x-Position</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> y;<font color="##339900">// y-Position</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> psi;<font color="##339900">// Gierwinkel</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> delta;<font color="##339900">// Lenkwinkel</font><br>
+&nbsp;&nbsp;<font color="#7f0055">double</font> v;<font color="##339900">// Geschwindigkeit</font><br>	
+}</p>
+<p>Das Fahrzeug hat eine Geschwindikeit und eine &Auml;nderung des Gierwinkels:<br>
+<IMG SRC="Fahrzeuggleichungen" BORDER=0 ALT=""><br>
+Die Geschwindigkeiten werden zu einer Positions&auml;derung aufintegriert. Der Radabstand ist l:<br> 
+Gerade:<br>
+<IMG SRC="gerade.jpg" BORDER=0 ALT=""><br>
+Kreis:<br>
+<IMG SRC="kreis.jpg" BORDER=0 ALT="">
+Diese Berechnung findet in der Methode fahren statt:<br>
+</p>
+
+</BODY>
+</HTML>

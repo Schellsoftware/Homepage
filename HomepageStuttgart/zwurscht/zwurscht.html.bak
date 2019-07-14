@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE> Schiess den Zwurscht </TITLE>
+<META NAME="Generator" CONTENT="EditPlus 1.2">
+<META NAME="Author" CONTENT="Harald Schellinger">
+<META NAME="Keywords" CONTENT="Wurscht">
+<META NAME="Description" CONTENT="Schiess den Wurscht">
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF">
+<h1>Wiescht, wiescht isch der Zwurscht</h1>
+<h1>Wenn der Zwurscht nicht so wiescht w&auml;r, m&uuml;sste man den Zwurscht nicht abschie&szlig;en.</h1>
+<A style="CURSOR: crosshair">
+        <p align="center"><applet code=zwurscht.class width="328" height="250" ></applet></p></A>
+</BODY>
+</HTML>

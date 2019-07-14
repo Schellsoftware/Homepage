@@ -1,0 +1,92 @@
+<html>
+
+<head>
+
+<meta name="author" content="Harald Schellinger">
+
+<title>Homepage von Harald Schellinger</title>
+<SCRIPT language="JavaScript">
+//<!--
+function show1(file,text)  {
+ document.change1.src=file;
+ window.status=text; 
+} 
+function show2(file,text)  {
+ document.change2.src=file;
+ window.status=text; 
+} 
+function show3(file,text)  {
+ document.change3.src=file;
+ window.status=text; 
+} 
+function show4(file,text)  {
+ document.change4.src=file;
+ window.status=text; 
+} 
+function show41(file,text)  {
+ document.change41.src=file;
+ window.status=text; 
+} 
+function show42(file,text)  {
+ document.change42.src=file;
+ window.status=text; 
+} 
+function show5(file,text)  {
+ document.change5.src=file;
+ window.status=text;
+}
+function show6(file,text)  {
+ document.change6.src=file;
+ window.status=text;
+}
+
+function show7(file,text)  {
+ document.change7.src=file;
+ window.status=text;
+}
+//-->
+</SCRIPT>
+
+</head>
+<BODY TEXT="#FFFFFF"  LINK="#000000" VLINK="#000000" ALINK="#000000" BGCOLOR="#000000">
+
+<A HREF="http://schellinger.de/schellinger.html" target="rechts"
+onMouseover="show1('wappen_dr.jpg','Stammbaum der Familie Schellinger');return true;" onMouseout="show1('wappen.jpg','');return true;">
+<IMG SRC="wappen.jpg" NAME="change1" BORDER=0 width="141" height="141"></A>
+
+
+<A HREF="http://schellinger.de/schellinger.html" target="rechts"
+onMouseover="show2('ahnen_dr.jpg','Stammbaum der Familie Schellinger');return true;" onMouseout="show2('ahnen.jpg','');return true;">
+<IMG SRC="ahnen.jpg" NAME="change2" BORDER=0></A>
+
+<A HREF="ich/ich.html" target="rechts"
+onMouseover="show3('Ich_dr.jpg','Informationen &uuml;ber mich');return true;" onMouseout="show3('Ich.jpg','');return true;">
+<IMG SRC="Ich.jpg" NAME="change3" BORDER=0></A>
+
+<A HREF="ich/ich.html" target="rechts"
+onMouseover="show4('info_dr.jpg','Informationen &uuml;ber mich');return true;" onMouseout="show4('info.jpg','');return true;">
+<IMG SRC="info.jpg" NAME="change4" BORDER=0></A>
+
+<A HREF="politik/politik.html" target="rechts"
+onMouseover="show41('politik_dr.jpg','Politische Ansichten');return true;" onMouseout="show41('politik_i.jpg','');return true;">
+<IMG SRC="politik_i.jpg" NAME="change41" BORDER=0></A>
+
+<A HREF="regelungstechnik/index.html" target="rechts"
+onMouseover="show42('regelungs_dr.jpg','Regelungstechnik');return true;" onMouseout="show42('regelugstechnik.jpg','');return true;">
+<IMG SRC="regelugstechnik.jpg" NAME="change42" BORDER=0></A>
+
+<A HREF="http://de.geocities.com/h2001ar/bilder.html" target="rechts" onMouseover="show5('bildergalerie_dr.jpg','Eine kleine Fotogalerie');return true;" onMouseout="show5('bildergalerie.jpg','');return true;">
+<IMG SRC="bildergalerie.jpg" NAME="change5" BORDER=0></A>
+
+
+
+<A style="CURSOR: crosshair" HREF="http://de.geocities.com/h2001ar/robotik/robotik.htm"  target="rechts"
+onMouseover="show6('robotik_dr.jpg','Robotik');return true;" onMouseout="show6('robotik.jpg','');return true;">
+<IMG SRC="robotik.jpg" NAME="change6" BORDER=0></A>
+</BR>
+<A HREF="mailto:harald@schellinger.de"
+onMouseover="show7('mail_dr.jpg','eMail an mich');return true;" onMouseout="show7('mail.jpg','');return true;">
+<IMG SRC="mail.jpg" NAME="change7" BORDER=0></A>
+
+</body>
+</html>

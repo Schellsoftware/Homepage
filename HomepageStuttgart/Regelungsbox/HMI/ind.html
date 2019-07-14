@@ -1,0 +1,237 @@
+
+
+
+
+
+
+
+
+<p>Die Oberfl&auml;che besteht aus folgenden Elementen:</p>
+<img src="objecte.jpg" alt="" border="0" width="1356" height="342">
+<p>Die Elemente kommen an folgende Position</p>
+<img src="dimension.jpg" alt="" border="0" width="1341" height="215">
+<p>Das schlie&szlig;en des Fensters</p>
+<table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+
+//Schlie&szlig;en des Fensters<br>
+<br>
+addWindowListener( new WindowAdapter() {  <br>
+<br>
+&nbsp;&nbsp;  public void windowClosing(WindowEvent e) {<br>
+<br>
+&nbsp;&nbsp;&nbsp; &nbsp;      System.exit(0);<br>
+ <br>
+ &nbsp;&nbsp; }  <br>
+<br>
+} );<br>
+</td>
+ </tr>
+</table>
+<p>Das logfile zum Aufzeichnen wird ge&ouml;ffnet:</p>
+<table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>            try {<br>
+  &nbsp;&nbsp;logfile = new BufferedWriter(<br>
+  &nbsp;&nbsp;                                 new OutputStreamWriter(<br>
+  &nbsp;&nbsp;                                 new FileOutputStream( "Logfile.txt" ) ) );<br>
+  &nbsp;&nbsp;              logfile.write("logfile.txt");<br>
+  &nbsp;&nbsp;              logfile.newLine();<br>
+
+ } catch( IOException ex ) {<br>
+ &nbsp;&nbsp;             System.out.println( ex );<br>
+ &nbsp;&nbsp;                       try{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;                               logfile.write(ex.toString());<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;                               logfile.newLine();<br>
+ &nbsp;&nbsp;                       }catch(Exception exp){<br>
+&nbsp;&nbsp;                        }<br>
+}<br>
+
+  </td>
+ </tr>
+</table>
+
+
+<p>Die serielle Schnittstelle COM4 wird mit einer Bautrate 9600 ge&ouml;ffnet</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+  <tr>
+   <td>
+
+
+
+
+//Die serielle Schnittstelle wird parametriert. Der COMPort 4 wird gew&auml;lt. Die Bautrate ist 9600.<br>
+
+try{<br>
+
+&nbsp;&nbsp;  SerialPort serialPort = new SerialPort(); <br>
+
+&nbsp;&nbsp;  Parameters parameters = new Parameters();<br>
+
+&nbsp;&nbsp;  parameters.setPort("COM4");    <br>
+
+&nbsp;&nbsp;  parameters.setBaudRate("9600");  <br>
+
+&nbsp;&nbsp; com = new Com(parameters); <br>
+
+} catch (Exception e) {<br>
+
+&nbsp;&nbsp;e.printStackTrace();  <br>
+
+}                   <br>
+</td>
+ </tr>
+ </table>
+ <p>Der Servo bekommt einen Sollwert (S) zwischen 0...120 Grad. Der String "S90" gibt die Stellung des Servos vor.</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+ if ((event.target == servoButton)){<br>
+ &nbsp;&nbsp;String servoString=new String();<br>
+ &nbsp;&nbsp;servoString="S"+servoField.getText();<br>
+ &nbsp;&nbsp;sendData(servoString);<br>
+ &nbsp;&nbsp;return true;<br>
+ }<br>
+ </td>
+ </tr>
+ </table>
+ <p>Wenn ein anderer Port gew&auml;hlt wird kann dieser Eingestellt werden.</p>
+  <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+ else if ((event.target == connectButton)){<br>
+ &nbsp;&nbsp;                       try{<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;Parameters parameters = new Parameters();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;parameters.setPort(connectField.getText());<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;logfile.write("Port: "+connectField.getText());<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;System.out.println(connectField.getText());<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;parameters.setBaudRate("9600");<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;logfile.write("Baurate: 9600");<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;com = new Com(parameters);<br>
+ &nbsp;&nbsp; } catch (Exception e) {<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;e.printStackTrace();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; try{<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;logfile.write(e.toString());<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}catch(Exception exp){<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;return true<br>
+ &nbsp;&nbsp; }<br>
+  </td>
+ </tr>
+ </table>
+ <p>Es wird "A"(Analogwert) an den Prozessor gesendet. Der Distanzsensor wird ausgelesen und sendet einen String zur&uuml;ck.</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+else if ((event.target == distanzButton)){<br>
+&nbsp;&nbsp;String serielEingang=new String();<br>
+&nbsp;&nbsp;String input;<br>
+&nbsp;&nbsp;sendData("A");<br>
+&nbsp;&nbsp;serielEingang=receiveData('A');<br>
+&nbsp;&nbsp;input=serielEingang.substring(1);<br>
+&nbsp;&nbsp;distanzField.setText(input);<br>
+&nbsp;&nbsp;return true;<br>
+}<br>
+ </td>
+ </tr>
+ </table>
+<p>Die Led wird an oder aus geschalten, wenn der ledButton gedr&uuml;ckt wurde</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+else if ((event.target == ledButton)){//Bei Dr&uuml;cken des ledButton<br>
+&nbsp;&nbsp;if(led.getState()==true)sendData("D5");//Schalte Led an<br>
+&nbsp;&nbsp;else sendData("D6");//Schalte Led aus<br>
+&nbsp;&nbsp;return true;<br>
+}<br>
+ </td>
+ </tr>
+ </table>
+ <p>Die beiden Taster werden abgefragt, wenn der tasterButton gedr&uuml;ckt wird.</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+else if ((event.target == tasterButton)){<br>
+&nbsp;&nbsp;sendData("D2");//Taster 2 soll ausgelesen werden<br>
+&nbsp;&nbsp;String tasterString1=receiveData('D');//Zustand des Tasters 2<br>
+&nbsp;&nbsp;if(tasterString1.charAt(1)=='0') taster1.setState(true);//Checkbox wird markiert<br>
+&nbsp;&nbsp;else taster1.setState(false);//Keine Markierung des Checkbox<br>
+&nbsp;&nbsp;sendData("D3");//Taster 3 soll ausgelesen werden<br>
+&nbsp;&nbsp;//String tasterString2=receiveData('D');//Zustand des Tasters 3<br>
+&nbsp;&nbsp;//if(tasterString2.charAt(1)=='0') taster2.setState(true);//Checkbox wird markiert<br>
+&nbsp;&nbsp;else taster2.setState(false);//Keine Markierung des Checkbox<br>
+&nbsp;&nbsp;return true;<br>
+}<br>
+ </td>
+ </tr>
+ </table>
+ <p>Senden eines Strings an den Mikrocontroller</p>
+  <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+ public void sendData(String data){<br>
+ &nbsp;&nbsp;try{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;for (int i = 0; i < data.toCharArray().length; i++) {//Sende den Sting<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.sendSingleData(data.toCharArray()[i]);//Buchstabe f&uuml;r Buchstabe wird gesendet<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;com.sendSingleData(13);//Der String endet mit Zeilenumbruch<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;logfile.write("Sende:"+data);//Im logfile wird gespeichert<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;catch(Exception e){//Wenn nicht gesendet werden kann<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;e.printStackTrace();//Bei Consolenanwendungen wird auf die Konsole gescrieben<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;try{<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logfile.write(e.toString());//Fehler wird ins Logfile geschrieben<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch(Exception exp){<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;}<br>
+}<br>
+ </td>
+ </tr>
+ </table>
+ <p>Empfangen eines Strings vom Mikrocontroller</p>
+ <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+public String receiveData(char kommand){<br>
+ &nbsp;&nbsp;String buchstabe=new String();<br>
+ &nbsp;&nbsp;try{<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;serialString.delete(0, serialString.length());//Der String wird gel&ouml;scht<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;while(!buchstabe.equalsIgnoreCase("\n")){//Solange kein Zeilenumbruch kommt<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;buchstabe=com.receiveSingleString();//Neuer Buchstabe wird empfangen<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;if(buchstabe.length()>0) {//Wenn der String Buchstabe nicht leer ist<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;serialString.append(buchstabe);//Buchstabe wird angeh&auml;ngt<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;logfile.write("Empfangen:"+serialString.toString());//Empfangener String<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;       catch(Exception e){<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;e.printStackTrace();//Fehler wird auf Console geschrieben<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;try{<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;logfile.write(e.toString());//In die logfile Datei wird geschrieben<br>
+ &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;logfile.newLine();<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}catch(Exception exp){<br>
+ &nbsp;&nbsp; &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;}<br>
+ &nbsp;&nbsp;return serialString.toString();<br>
+}<br>
+ </td>
+ </tr>
+ </table>
+ <p>Die Appliation wird initiert</p>
+  <table width="100%" border="1" bgcolor="#FFFF80" cellpadding="0" cellspacing="2">
+ <tr>
+  <td>
+ public static void main(String[] args) {<br>
+ &nbsp;&nbsp;HMI hmi=new HMI();<br>
+ &nbsp;&nbsp;hmi.init();<br>
+ }<br>
+ </td>
+ </tr>
+ </table>

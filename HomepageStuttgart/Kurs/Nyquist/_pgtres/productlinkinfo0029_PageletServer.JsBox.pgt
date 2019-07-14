@@ -1,0 +1,80 @@
+========== Description Part Begin ==========
+Title = productlinkinfo0029
+ProgID = PageletServer.JsBox
+LastUpdateTime = 40492.843159722
+PreviewPath = _pgtres/
+Description = link info
+========== Description Part End ==========
+
+========== Parameter Part Begin ==========
+LinkInfoPara = Center,Visit,eef9d2,229,3,100,45,3,5,3
+LinkInfoSize = 79,79,79,
+LinkInfoCommend = Sothink HTML Editor is a totally free web page editor. It supports build-in FTP~@^`highlighted keyword's tags and can be integrated with the tools. More features about Sothink...,A powerful tool creat a pop-up menu.,A customizable non-program button tool unlimited button number.,An ingerious menu tool helps you to create a navigation tree in web browser!,Animate banner 14 effects are supported.,
+LinkInfoLink = http://www.sothink.com/,http://www.sothink.com/coolmenu.htm,http://www.sothink.com/coolbutton.htm,http://www.sothink.com/slidingmenu.htm,http://www.sothink.com/cooltext.htm,
+LinkInfoName = Sothink HTML Editor,coolmenu,coolbutton,slidingmenu,cooltext,
+JsBoxType = 13
+========== Parameter Part End ==========
+
+========== Resource Part Begin ==========
+Resource Number = 0
+========== Resource Part End ==========
+
+========== HTML Part Begin ==========
+Segment Number = 1
+Segment Position = cursor
+<script language="JavaScript">
+function productlinkinfo0029linkDisplay(selection,formname) {
+if (selection=="0") {
+		document.forms[formname].info.value="Sothink HTML Editor is a totally free web page editor. It supports build-in FTP,highlighted keyword's tags and can be integrated with the tools. More features about Sothink...";
+		document.forms[formname].go.value="http://www.sothink.com/";}
+else
+if (selection=="1") {
+		document.forms[formname].info.value="A powerful tool creat a pop-up menu.";
+		document.forms[formname].go.value="http://www.sothink.com/coolmenu.htm";}
+else
+if (selection=="2") {
+		document.forms[formname].info.value="A customizable non-program button tool unlimited button number.";
+		document.forms[formname].go.value="http://www.sothink.com/coolbutton.htm";}
+else
+if (selection=="3") {
+		document.forms[formname].info.value="An ingerious menu tool helps you to create a navigation tree in web browser!";
+		document.forms[formname].go.value="http://www.sothink.com/slidingmenu.htm";}
+else
+if (selection=="4") {
+		document.forms[formname].info.value="Animate banner 14 effects are supported.";
+		document.forms[formname].go.value="http://www.sothink.com/cooltext.htm";}
+	}
+function productlinkinfo0029moreInfo(formname) {
+	var page=document.forms[formname].go.value;
+	if (page=="")
+		{window.location="";}
+	else
+		{window.location=page;}
+}
+</script>
+<form name=srctecLinkInfoproductlinkinfo0029>
+<div align="Center">
+<table border=0 width=229 align="Center" bgcolor="#eef9d2">
+<tr>
+<td align=center width="79"><a href="javascript:productlinkinfo0029linkDisplay(0,'srctecLinkInfoproductlinkinfo0029');">Sothink HTML Editor</a><br></td>
+<td align=center width="79"><a href="javascript:productlinkinfo0029linkDisplay(1,'srctecLinkInfoproductlinkinfo0029');">coolmenu</a><br></td>
+<td align=center width="79"><a href="javascript:productlinkinfo0029linkDisplay(2,'srctecLinkInfoproductlinkinfo0029');">coolbutton</a><br></td>
+</tr>
+<tr>
+<td align=center width="79"><a href="javascript:productlinkinfo0029linkDisplay(3,'srctecLinkInfoproductlinkinfo0029');">slidingmenu</a><br></td>
+<td align=center width="79"><a href="javascript:productlinkinfo0029linkDisplay(4,'srctecLinkInfoproductlinkinfo0029');">cooltext</a><br></td>
+</tr>
+<tr>
+<td colspan=3 align="Center" height=100>
+<textarea name=info rows=3 cols=45 wrap=virtual></textarea>
+<br>
+<input type=button name=button onClick="productlinkinfo0029moreInfo('srctecLinkInfoproductlinkinfo0029')" value="Visit">
+<input type=hidden name=go value="">
+</td>
+</tr>
+</table>
+</div>
+</form>
+===== Segment End =====
+========== HTML Part End ==========
+

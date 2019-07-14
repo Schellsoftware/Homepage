@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>HMI</title>
+<meta name="author" content="Schakal">
+<meta name="editor" content="html-editor phase 5">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#FF0000" alink="#FF0000" vlink="#FF0000">
+<pre>
+#include&nbsp;&lt;<span style="color: #CC6600;">Servo</span>.h&gt;
+&nbsp;
+<span style="color: #CC6600;">Servo</span> meinservo;  <span style="color: #7E7E7E;">//Der Servo wird angesprochen</span>
+&nbsp;
+#define&nbsp;INLENGTH&nbsp;16<span style="color: #7E7E7E;">//L&#228;nge des Strings</span>
+#define&nbsp;INTERMINATOR&nbsp;13<span style="color: #7E7E7E;">//Zeilenumbruch</span>
+<span style="color: #CC6600;">char</span> empfString[INLENGTH+1];<span style="color: #7E7E7E;">//String der empfangen wird</span>
+<span style="color: #CC6600;">char</span> empfDataString[INLENGTH+1];<span style="color: #7E7E7E;">//Empfangener String ohne Befehlszeichen</span>
+<span style="color: #CC6600;">int</span> inCount;
+
+<span style="color: #CC6600;">int</span> analogPin = 5;     <span style="color: #7E7E7E;">//Der Distanzsensor liegt an PIN 5</span>
+<span style="color: #CC6600;">int</span> val = 0;           <span style="color: #7E7E7E;">//Wert des Distanzsensors</span>
+<span style="color: #CC6600;">int</span> taster2, taster3; <span style="color: #7E7E7E;">//Tasten</span>
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>setup</b></span>()
+{&nbsp;
+&nbsp;&nbsp;meinservo.<span style="color: #CC6600;">attach</span>(9);  <span style="color: #7E7E7E;">// attaches the servo on pin 9 to the servo object </span>
+&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">begin</span>(9600);<span style="color: #7E7E7E;">//Die Bautrate 9600 wird gesetzt</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">pinMode</span>(2,<span style="color: #006699;">INPUT</span>);<span style="color: #7E7E7E;">//PIN2 als Input</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">digitalWrite</span>(2,<span style="color: #006699;">HIGH</span>);<span style="color: #7E7E7E;">//An PIN2 wird der Pullup Widerstand aktviert</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">pinMode</span>(3,<span style="color: #006699;">INPUT</span>);<span style="color: #7E7E7E;">//PIN3 als Input</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">digitalWrite</span>(3,<span style="color: #006699;">HIGH</span>);<span style="color: #7E7E7E;">//An PIN3 wird der Pullup Widerstand aktviert</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">pinMode</span>(5,<span style="color: #006699;">OUTPUT</span>);<span style="color: #7E7E7E;">//Die LED wird an PIN5 angeschlossen</span>
+}&nbsp;
+&nbsp;
+<span style="color: #7E7E7E;">//&nbsp;int&nbsp;incomingByte&nbsp;=&nbsp;0;        //Anzahl&nbsp;der&nbsp;eingehenden&nbsp;Zeichen</span>
+
+<span style="color: #CC6600;">void</span> <span style="color: #CC6600;"><b>loop</b></span>()
+&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;inCount&nbsp;=&nbsp;0;<span style="color: #7E7E7E;">//Anzahl der eingehenden Zeichen ist 0</span>
+&nbsp;&nbsp;<span style="color: #CC6600;">do</span> {
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">while</span> (!<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">available</span>());             <span style="color: #7E7E7E;">//Warte bis ein Zeichen anliegt </span>
+&nbsp;&nbsp;&nbsp;&nbsp;empfString[inCount]&nbsp;=&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">read</span>();       <span style="color: #7E7E7E;">//Lese ein Zeichen ein und speichere es in empfString</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span> (empfString [inCount] == INTERMINATOR) <span style="color: #CC6600;">break</span>;<span style="color: #7E7E7E;">//Wenn ein Zeilenumbruch kommt beende die Schleife</span>
+&nbsp;&nbsp;}&nbsp;<span style="color: #CC6600;">while</span>(++inCount &lt; INLENGTH);<span style="color: #7E7E7E;">//Solange der String kleiner als das Maximum ist</span>
+&nbsp;&nbsp;empfString[inCount]&nbsp;=&nbsp;0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #7E7E7E;">//Mit Null wird der String beendet        </span>
+&nbsp;&nbsp;<span style="color: #CC6600;">for</span>(<span style="color: #CC6600;">int</span> i=0;i&lt;inCount-1;i++){<span style="color: #7E7E7E;">//Das erste Zeichen ist der Befehl</span>
+&nbsp;&nbsp;&nbsp;&nbsp;empfDataString[i]=empfString[i+1];<span style="color: #7E7E7E;">//der neue String ist ohne das erste Zeichen (Befehl)</span>
+&nbsp;&nbsp;}
+&nbsp;&nbsp;<span style="color: #CC6600;">switch</span>(empfString[0]){<span style="color: #7E7E7E;">//Zeichen f&#252;r das Kommando</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">case</span> <span style="color: #006699;">'A'</span>: <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">"A"</span>);<span style="color: #7E7E7E;">//Mit A (Analogwert) wird der Distanzsensor abgefragt</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;val&nbsp;=&nbsp;<span style="color: #CC6600;">analogRead</span>(analogPin);    <span style="color: #7E7E7E;">// val ist der eingelesene Analogwert</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(val);<span style="color: #7E7E7E;">//Die Distanz wird zur&#252;ckgesendet</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">break</span>;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">case</span> <span style="color: #006699;">'D'</span>: <span style="color: #7E7E7E;">//Die digital Ein- und Ausg&#228;nge werden abgefragt</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(empfDataString[0]==<span style="color: #006699;">'2'</span>){<span style="color: #7E7E7E;">//Taster2 an PIN 2 wird abgefragt</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taster2&nbsp;=&nbsp;<span style="color: #CC6600;">digitalRead</span>(2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">"D"</span>);<span style="color: #7E7E7E;">//Kommando wird zur&#252;ckgegeben</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(taster2);<span style="color: #7E7E7E;">//gedr&#252;ckt ist 0 und ungedr&#252;ckt ist 1</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(empfDataString[0]==<span style="color: #006699;">'3'</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;taster3&nbsp;=&nbsp;<span style="color: #CC6600;">digitalRead</span>(3);<span style="color: #7E7E7E;">//Taster3 an PIN 3 wird abgefragt</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">"D"</span>);<span style="color: #7E7E7E;">//Kommando wird zur&#252;ckgegeben</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">println</span>(taster3);<span style="color: #7E7E7E;">//gedr&#252;ckt ist 0 und ungedr&#252;ckt ist 1</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(empfDataString[0]==<span style="color: #006699;">'5'</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">digitalWrite</span>(5,<span style="color: #006699;">HIGH</span>);<span style="color: #7E7E7E;">//Led wird angeschalten</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">if</span>(empfDataString[0]==<span style="color: #006699;">'6'</span>){
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">digitalWrite</span>(5,<span style="color: #006699;">LOW</span>);<span style="color: #7E7E7E;">//Led wird ausgeschalten</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">break</span>;
+&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">case</span><span style="color: #006699;">'S'</span>: <span style="color: #CC6600;"><b>Serial</b></span>.<span style="color: #CC6600;">print</span>(<span style="color: #006699;">"S"</span>);<span style="color: #7E7E7E;">//Sollwert f&#252;r Servo</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">int</span> mein_integer_data = atoi(empfDataString);<span style="color: #7E7E7E;">//Sollwertgenerierung</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;meinservo.<span style="color: #CC6600;">write</span>(mein_integer_data);<span style="color: #7E7E7E;">//Servo</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #CC6600;">break</span>;
+&nbsp;&nbsp;}
+}
+
+</pre>
+</body>
+</html>
